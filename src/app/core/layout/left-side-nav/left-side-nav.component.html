@@ -1,0 +1,16 @@
+<nav class="left-nav" aria-label="Section navigation">
+  <ul>
+    @for (item of items; track item.id) {
+      <li>
+        <button
+          type="button"
+          class="nav-link"
+          [class.is-active]="activeId() === item.id"
+          (click)="goTo(item.id)">
+          <span class="nav-dot"></span>
+          <span class="nav-label">{{ label(item.labelKey) }}</span>
+        </button>
+      </li>
+    }
+  </ul>
+</nav>

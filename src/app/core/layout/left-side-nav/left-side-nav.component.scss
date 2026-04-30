@@ -1,0 +1,49 @@
+.left-nav {
+  position: relative;
+  z-index: 2;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-soft);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: color 180ms ease, transform 180ms ease;
+
+  &:hover,
+  &:focus-visible,
+  &.is-active {
+    color: #ff38c7;
+  }
+
+  &.is-active .nav-dot {
+    background: #ff38c7;
+    box-shadow: 0 0 12px rgba(255, 56, 199, 0.7);
+  }
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ff38c7;
+  border-radius: 2px;
+  background: transparent;
+}
+
+.nav-label {
+  text-transform: lowercase;
+}

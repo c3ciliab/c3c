@@ -1,0 +1,19 @@
+{
+  "nav.home": "home",
+  "nav.about": "about c3c",
+  "nav.services": "prestations",
+  "nav.portfolio": "portfolio",
+  "nav.journey": "parcours",
+  "nav.contact": "contact",
+
+  "common.next": "suite",
+
+  "home.title": "Je conçois et développe des interfaces web et applicatives.",
+  "home.subtitle": "Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire.",
+  "home.cta.projects": "Voir mes projets",
+  "home.cta.contact": "Me contacter",
+
+  "about.title": "Profil hybride",
+  "about.text.1": "Entre design et développement, j’interviens sur toute la chaîne de production.",
+  "about.text.2": "J’accompagne les projets de l’analyse au prototype, jusqu’à l’intégration et la structuration des interfaces."
+}

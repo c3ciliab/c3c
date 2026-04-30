@@ -1,0 +1,21 @@
+<section
+  id="about"
+  class="screen-section about-section"
+  data-section
+  appSectionAnchor
+  sectionId="about">
+
+  <div class="about-section__visual" appParallaxLayer [speed]="0.12" axis="both">
+    <img src="assets/img/icec.png" alt="" />
+  </div>
+
+  <div class="about-section__content">
+    <h2>{{ t('about.title') }}</h2>
+    <p>{{ t('about.text.1') }}</p>
+    <p>{{ t('about.text.2') }}</p>
+  </div>
+
+  <div class="about-section__next">
+    <app-next-section-button currentSectionId="about" />
+  </div>
+</section>

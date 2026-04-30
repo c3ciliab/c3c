@@ -1,9 +1,16 @@
 /*********** RESET / NORMALIZE ***********/
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 html, body {
@@ -24,26 +31,17 @@ h1, h2, h3, h4, h5, h6, p, label {
   font-weight: normal;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 ul, li {
   list-style: none;
 }
 
-button {
+a,
+button,
+input,
+textarea,
+select {
   font-family: inherit;
   text-decoration: none;
-  color: inherit;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-input, select, textarea {
-  font-family: inherit;
   color: inherit;
 
   &:focus {
@@ -51,8 +49,15 @@ input, select, textarea {
   }
 }
 
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 img {
   vertical-align: middle;
+  max-width: 100%;
   height: auto;
 
   &.img-responsive {
