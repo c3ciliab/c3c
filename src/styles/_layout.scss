@@ -12,8 +12,43 @@
   @extend %flexcol;
   align-items: center;
 }
+//block centered
+%blockcentered {
+  @extend %block;
+  justify-content: center;
+}
+//full centered block
+%fullcentered {
+  @extend %blockcentered;
+  width: 100%;
+  min-height: 100dvh;
+}
 
 /* BLOCKS */
+
+.screen-section {
+  @extend %fullcentered;
+  position: relative;
+  z-index: 1;
+  //padding: 4rem 6rem;
+  scroll-snap-align: start;
+
+  .content {
+    @extend %blockcentered;
+    flex: 1;
+    max-width: 100%;
+    //height: 100svh;
+  }
+
+  .next {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+  }
+}
+
+/* BLOCKS
 
 //full block centered
 .container {
@@ -33,12 +68,6 @@
   gap: 2rem;
 }
 
-.content {
-  @extend %flexcol;
-  gap: 1rem;
-  width: 100%;
-}
-
 .scene {
   display: flex;
   gap: 1rem;
@@ -50,3 +79,4 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+*/

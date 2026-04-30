@@ -31,7 +31,15 @@ export class I18nService {
   }
 
   t(key: string): string {
-    return this.dictionarySignal()[key] ?? key;
+    const dictionary = this.dictionarySignal();
+    const value = key.split('.').reduce<unknown>((acc, part) => {
+      if (acc && typeof acc === 'object' && part in acc) {
+        return (acc as Record<string, unknown>)[part];
+      }
+      return undefined;
+    }, dictionary);
+
+    return typeof value === 'string' ? value : key;
   }
 
   private async load(lang: AppLang): Promise<void> {

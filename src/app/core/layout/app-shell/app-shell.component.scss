@@ -1,34 +1,46 @@
 .app-shell {
-  display: grid;
-  grid-template-columns: 180px 1fr;
+  display: flex;
   min-height: 100svh;
-  background: var(--bg-900);
-  color: var(--text-main);
+  //background: var(--bg-900);
+  //color: var(--text-main);
 }
 
 .shell-side {
   position: fixed;
-  inset: 0 auto 0 0;
-  width: 180px;
+  top: 0;
   z-index: 20;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem 1rem;
+
+  &.s-left {
+    left: 0;
+    width: var(--sidebar);
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--sp-3);
+  }
+
+  &.s-right {
+    right: 0;
+    padding: var(--sp-2);
+  }
 }
 
 .shell-main {
   position: relative;
-  margin-left: 180px;
+  flex: 1 1 auto;
+  min-width: 0;
+  //margin-left: var(--sidebar);
+  //padding-left: var(--sidebar);
 }
 
 .background-scene {
   position: fixed;
   inset: 0;
-  background:
-    linear-gradient(rgba(10, 3, 24, 0.4), rgba(10, 3, 24, 0.75)),
-    url('/assets/img/bg/bg-home.png') center / cover no-repeat;
   z-index: 0;
+  background:
+    //linear-gradient(rgba(10, 3, 24, 0.4), rgba(10, 3, 24, 0.75)),
+    url('/assets/img/bg/bg-home.png') center / cover no-repeat;
 }
 
 @media (max-width: 900px) {
@@ -38,8 +50,11 @@
 
   .shell-side {
     width: auto;
-    inset: auto 0 0 0;
-    padding: 1rem;
+    padding: 0.75rem 1rem;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(10, 3, 24, 0.78);
+    backdrop-filter: blur(10px);
   }
 
   .shell-main {

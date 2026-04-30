@@ -7,14 +7,15 @@ import { Directive, ElementRef, HostListener, Input, inject } from '@angular/cor
 export class ParallaxLayerDirective {
   private readonly el = inject(ElementRef<HTMLElement>);
 
-  @Input() speed = 0.15;
+  @Input() speed = 0.12;
   @Input() axis: 'y' | 'x' | 'both' = 'y';
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    const scrollY = window.scrollY;
-    const moveY = scrollY * this.speed;
-    const moveX = scrollY * (this.speed / 3);
+    const rect = this.el.nativeElement.getBoundingClientRect();
+    const offsetFromViewportCenter = rect.top - window.innerHeight / 2;
+    const moveY = offsetFromViewportCenter * this.speed;
+    const moveX = offsetFromViewportCenter * (this.speed / 2);
 
     let transform = '';
 

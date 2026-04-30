@@ -1,19 +1,34 @@
 {
-  "nav.home": "home",
-  "nav.about": "about c3c",
-  "nav.services": "services",
-  "nav.portfolio": "portfolio",
-  "nav.journey": "journey",
-  "nav.contact": "contact",
+  "nav": {
+    "home": "home",
+    "about": "about c3c",
+    "services": "services",
+    "portfolio": "portfolio",
+    "journey": "journey",
+    "contact": "contact"
+  },
 
-  "common.next": "next",
+  "common": {
+    "next": "next"
+  },
 
-  "home.title": "I design and build web and application interfaces.",
-  "home.subtitle": "Front-end, integration, UX/UI, design systems: a hybrid profile turning needs into clear, coherent and production-ready interfaces.",
-  "home.cta.projects": "View projects",
-  "home.cta.contact": "Contact me",
+  "home": {
+    "title": {
+      "dev": "Front-end development",
+      "integration": "Web integration",
+      "design": "UX/UI Web design",
+      "long": "I design and build web and application interfaces"
+    },
+    "subtitle": "Front-end, integration, UX/UI, design systems: a hybrid profile turning needs into clear, coherent and production-ready interfaces",
+    "cta": {
+      "projects": "View projects",
+      "contact": "Contact me"
+    }
+  },
 
-  "about.title": "Hybrid profile",
-  "about.text.1": "Between design and development, I work across the full production chain.",
-  "about.text.2": "I support projects from analysis and prototypes to integration and interface structuring."
+  "about": {
+    "title": "Hybrid profile",
+    "intro": "Between design and development, I work across the full production chain",
+    "body": "I support projects from analysis and prototypes to integration and interface structuring"
+  }
 }

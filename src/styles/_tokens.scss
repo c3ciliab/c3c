@@ -37,13 +37,18 @@
   --txt-secondary:  var(--secondary-color);
   --txt-default:    var(--default-color);
 
+  --text-soft:  #cbbce9;
+  --text-muted: #9a8db8;
+  --text-dark:  #0d0620;
+
   /*---------------*/
   /* LAYOUT */
   /*---------------*/
-  --sidebar-collapsed: 48px;
-  --sidebar-expanded: 256px;
-  --footer-h: 60px;
-  --header-h: 84px;
+  --sidebar: 180px;
+  //--sidebar-collapsed: 48px;
+  //--sidebar-expanded: 256px;
+  //--footer-h: 60px;
+  //--header-h: 84px;
 
   /*---------------*/
   /* SPACING */
@@ -55,15 +60,29 @@
   --sp-5: 3rem; //48px
 
   /*---------------*/
+  /* TRACKING */
+  /*---------------*/
+  --tr-tighter: -0.05em;
+  --tr-tiny: 0.01em;
+  --tr-wide: 0.025em;
+
+  /*---------------*/
   /* BORDERS / SHADOWS */
   /*---------------*/
   --border: 1px solid var(--default-color);
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(103, 64, 255, 0.45);
 
   --radius: 12px;
   --radius-sm: 8px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
 
-  --shadow: 0 10px 24px rgba(0,0,0,.10);
-  --shadow-soft: 0 4px 10px rgba(0,0,0,.08);
+  //--shadow: 0 10px 24px rgba(0,0,0,.10);
+  //--shadow-soft: 0 4px 10px rgba(0,0,0,.08);
+  --shadow-lg: 0 6px 12px rgba(18, 2, 46, .8); //#12022e
+  --shadow-glow-pink: 0 0 24px rgba(255, 56, 199, 0.22);
+  --shadow-glow-blue: 0 0 24px rgba(35, 183, 255, 0.2);
 
   /*---------------*/
   /* TRANSITIONS */
@@ -72,7 +91,6 @@
 }
 
 /*
-
   --bg-800: #13052a;
   --bg-700: #1b0b3d;
 
@@ -82,29 +100,14 @@
   --accent-2: #9b5cff;
   --highlight: #ffd166;
 
-  --surface-1: rgba(20, 10, 45, 0.78);
-  --surface-2: rgba(33, 16, 69, 0.82);
-  --surface-3: rgba(49, 22, 92, 0.9);
-
-  --border-soft: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(103, 64, 255, 0.45);
-
-
-  --text-soft: #cbbce9;
-  --text-muted: #9a8db8;
-  --text-dark: #0d0620;
-
   --success: #35d07f;
   --warning: #ffb84d;
   --danger: #ff5e7e;
   --info: #23b7ff;
 
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 28px;
-
-  --shadow-glow-pink: 0 0 24px rgba(255, 56, 199, 0.22);
-  --shadow-glow-blue: 0 0 24px rgba(35, 183, 255, 0.2);
+  --surface-1: rgba(20, 10, 45, 0.78);
+  --surface-2: rgba(33, 16, 69, 0.82);
+  --surface-3: rgba(49, 22, 92, 0.9);
 
   --page-padding-x: clamp(1.25rem, 4vw, 4rem);
   --page-padding-y: clamp(1.5rem, 4vw, 3rem);

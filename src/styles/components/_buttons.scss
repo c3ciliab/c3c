@@ -1,4 +1,4 @@
-/************* BUTTONS *************/
+/************* BUTTONS ************
 .btn {
   padding: 0.5rem 1rem;
   border: var(--border);
@@ -41,8 +41,60 @@
     cursor: not-allowed;
   }
 }
+*/
+
+.btn {
+  padding: .875rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  &.btn-switch {
+    min-width: 44px;
+    padding: .5rem .75rem;
+    background: rgba(20, 10, 45, .65);
+    border-color: rgba(255, 255, 255, .15);
+
+    &.is-active {
+      border-color: #23b7ff;
+      box-shadow: 0 0 12px rgba(35, 183, 255, 0.35);
+    }
+  }
+
+  &.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    background: linear-gradient(135deg, #7b2cff 0%, #ff38c7 55%, #23b7ff 100%);
+
+    &.secondary {
+      background: rgba(20, 10, 45, 0.62);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &.btn-next {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(19, 5, 42, 0.6);
+    border-color: rgba(255, 56, 199, 0.45);
+    backdrop-filter: blur(10px);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 0 18px rgba(255, 56, 199, 0.35);
+    }
+  }
+}
 
 .btn-group {
   display: flex;
-  gap: .5rem;
+  gap: 1rem;
+
+  &.sm {
+    gap: .5rem;
+  }
 }

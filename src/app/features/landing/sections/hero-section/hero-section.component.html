@@ -1,25 +1,33 @@
-<section
-  id="home"
-  class="screen-section hero-section"
-  data-section
-  appSectionAnchor
-  sectionId="home">
+<section id="home" class="screen-section hero-section" data-section appSectionAnchor sectionId="home">
 
-  <div class="hero-section__overlay" appParallaxLayer [speed]="0.08" axis="y"></div>
+  <div class="overlay" appParallaxLayer [speed]="0.08" axis="y"></div>
 
-  <div class="hero-section__content">
-    <img src="assets/img/icons/logo.png" alt="Symbol" width="80" />
-    <p class="hero-section__eyebrow">{{ title() }}</p>
-    <h1>{{ t('home.title') }}</h1>
-    <p class="hero-section__subtitle">{{ t('home.subtitle') }}</p>
+  <div class="content">
+    <!-- <img src="assets/img/icons/logo.png" alt="logo c3c" width="80" /> -->
+    <div class="hero">
+      <p class="brand">{{ title() }}</p>
+      <h1 class="tagline">
+        <span>{{ t('home.title.dev') }}</span>
+        <span>{{ t('home.title.integration') }}</span>
+        <span>{{ t('home.title.design') }}</span>
+      </h1>
+      <!-- <p class="subtitle">{{ t('home.subtitle') }}</p> -->
+    </div>
 
-    <div class="hero-section__actions">
-      <a href="#portfolio" class="hero-link">{{ t('home.cta.projects') }}</a>
-      <a href="#contact" class="hero-link hero-link--secondary">{{ t('home.cta.contact') }}</a>
+    <div class="btn-group">
+      <!-- <a href="#portfolio" class="hero-link">{{ t('home.cta.projects') }}</a>
+      <a href="#contact" class="hero-link hero-link--secondary">{{ t('home.cta.contact') }}</a> -->
+      <button type="button" class="btn btn-cta" (click)="goTo('about')">
+        {{ t('home.cta.projects') }}
+      </button>
+
+      <button type="button" class="btn btn-cta secondary" (click)="goTo('about')">
+        {{ t('home.cta.contact') }}
+      </button>
     </div>
   </div>
 
-  <div class="hero-section__next">
+  <div class="next">
     <app-next-section-button currentSectionId="home" />
   </div>
 </section>

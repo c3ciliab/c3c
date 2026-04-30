@@ -1,19 +1,34 @@
 {
-  "nav.home": "home",
-  "nav.about": "about c3c",
-  "nav.services": "prestations",
-  "nav.portfolio": "portfolio",
-  "nav.journey": "parcours",
-  "nav.contact": "contact",
+  "nav": {
+    "home": "home",
+    "about": "about c3c",
+    "services": "prestations",
+    "portfolio": "portfolio",
+    "journey": "parcours",
+    "contact": "contact"
+  },
 
-  "common.next": "suite",
+  "common": {
+    "next": "suite"
+  },
 
-  "home.title": "Je conçois et développe des interfaces web et applicatives.",
-  "home.subtitle": "Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire.",
-  "home.cta.projects": "Voir mes projets",
-  "home.cta.contact": "Me contacter",
+  "home": {
+    "title": {
+      "dev": "Développement Front",
+      "integration": "Intégration Web",
+      "design": "Web UX/UI design",
+      "long": "Je conçois et développe des interfaces web et applicatives"
+    },
+    "subtitle": "Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire",
+    "cta": {
+      "projects": "Voir mes projets",
+      "contact": "Me contacter"
+    }
+  },
 
-  "about.title": "Profil hybride",
-  "about.text.1": "Entre design et développement, j’interviens sur toute la chaîne de production.",
-  "about.text.2": "J’accompagne les projets de l’analyse au prototype, jusqu’à l’intégration et la structuration des interfaces."
+  "about": {
+    "title": "Profil hybride",
+    "intro": "Entre design et développement, j’interviens sur toute la chaîne de production",
+    "body": "J’accompagne les projets de l’analyse au prototype, jusqu’à l’intégration et à la structuration des interfaces"
+  }
 }

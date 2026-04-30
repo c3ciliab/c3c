@@ -1,13 +1,14 @@
-import { AfterViewInit, Directive, ElementRef, Input, inject } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Input, OnDestroy, inject } from '@angular/core';
 import { ActiveSectionService } from '../../core/services/active-section.service';
 
 @Directive({
   selector: '[appSectionAnchor]',
   standalone: true,
 })
-export class SectionAnchorDirective implements AfterViewInit {
+export class SectionAnchorDirective implements AfterViewInit, OnDestroy {
   private readonly el = inject(ElementRef<HTMLElement>);
   private readonly activeSectionService = inject(ActiveSectionService);
+  private observer?: IntersectionObserver;
 
   @Input({ required: true }) sectionId!: string;
 
@@ -26,5 +27,10 @@ export class SectionAnchorDirective implements AfterViewInit {
     );
 
     observer.observe(this.el.nativeElement);
+    //this.observer.observe(this.el.nativeElement);
+  }
+
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
   }
 }

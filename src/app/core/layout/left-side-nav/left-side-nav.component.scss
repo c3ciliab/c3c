@@ -47,3 +47,15 @@
 .nav-label {
   text-transform: lowercase;
 }
+
+@media (max-width: 900px) {
+  .left-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .nav-label {
+    font-size: 0.875rem;
+  }
+}
