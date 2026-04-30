@@ -1,12 +1,23 @@
-.hero {
+
+/* PLACEHOLDERS */
+
+%flexcol {
   display: flex;
   flex-direction: column;
+}
+
+%block {
+  @extend %flexcol;
   align-items: center;
+}
+
+/* BLOCKS */
+
+.hero {
+  @extend %block;
   //justify-content: center;
 
   .tagline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %block;
   }
 }
