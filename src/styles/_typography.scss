@@ -1,0 +1,83 @@
+/*************** TYPOGRAPHY ***************/
+//fonts, tailles, line-height…
+
+:root {
+  --font-sans: "Oxygen", sans-serif;
+  --font-mono: "Oxygen Mono", monospace;
+}
+
+/* FONTS */
+
+// IMPORTS
+// Adobe - Myriad Pro --> corporate font for baseline, auto switch to arial if not available
+@import url("https://use.typekit.net/arm4sae.css");
+
+// VARIABLES
+$myriad: "myriad-pro", sans-serif;
+$oxygen: "Oxygen", sans-serif;
+$bubbler: "Bubbler One", sans-serif;
+$mono: "Oxygen Mono", monospace;
+
+/* TEXT */
+
+// Sizes
+$xs-txt: 12px;
+$sm-txt: 14px;
+$md-txt: 20px;
+$lg-txt: 24px;
+$xl-txt: 28px;
+$xlg-txt: 32px;
+$xxl-txt: 60px;
+
+// Titles
+
+.brand {
+  font-size: $xxl-txt;
+}
+
+// h1 => tagline
+.tagline {
+  font-size: $lg-txt;
+}
+
+h2 {
+  font-family: $bubbler;
+  font-size: $xlg-txt;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: $md-txt;
+}
+
+h4 {
+  font-size: $md-txt;
+}
+
+// Other texts
+label, .label {
+  font-size: $sm-txt;
+}
+
+.subtext {
+  font-size: $xs-txt;
+  font-style: italic;
+  color: var(--default-color);
+}
+
+.muted {
+  font-size: $sm-txt;
+  opacity: .7;
+}
+
+// Styles
+@mixin brand-txt($style: italic) {
+    font-family: $myriad;
+    font-style: $style;
+    font-weight: bold;
+}
+
+@mixin time-txt {
+    font-family: $mono;
+}

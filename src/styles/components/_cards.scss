@@ -1,0 +1,40 @@
+/*********** CARDS ***********/
+
+/* PLACEHOLDERS */
+
+%flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+// card
+.card {
+  @extend %flexcol;
+  gap: var(--sp-2);
+  padding: var(--sp-2);
+  background-color: var(--body-color);
+  border: var(--border);
+  border-radius: var(--radius-sm);
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+
+    img {
+      width: 32px;
+    }
+  }
+
+  .card-body {
+    .data {
+      display: flex;
+      gap: var(--sp-1);
+    }
+
+    .subdata {
+      display: flex;
+      gap: var(--sp-1);
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/******************* TOKENS *******************/
+//variables: couleurs, spacing, radius…
+
+:root {
+  /*---------------*/
+  /* COLORS */ /* https://coolors.co/211240-3f336d-e90171-22e1e5-ffffff-434b58-fae730-190d30-251747-2f2156 */
+  /*---------------*/
+  /* palette principale */
+  --onyx:     #161616;
+  --graphite: #2a2a2a;
+  --dim-grey: #5e5e5e;
+  --silver:   #bfbfbf;
+  --white:    #ffffff;
+  /*---------------*/
+  --dark-amethyst:    #211240;
+  --twilight-indigo:  #3f336d;
+  --razzmatazz:       #e90171;
+  --neon-ice:         #22e1e5;
+  --bright-lemon:     #fae730;
+  --charcoal-blue:    #434b58;
+  /* design system */
+  --body-text:    var(--white);
+  --body-color:   var(--dark-amethyst);
+  /*---------------*/
+  --primary-color:    var(--dark-amethyst);
+  --secondary-color:  var(--twilight-indigo);
+  --accent-color:     var(--razzmatazz);
+  --success-color:    var(--neon-ice);
+  --alert-color:      var(--bright-lemon);
+  --default-color:    var(--charcoal-blue);
+  /******************/
+  --bg-primary:   var(--primary-color);
+  --bg-secondary: var(--secondary-color);
+  --bg-default:   var(--default-color);
+
+  --txt-primary:    var(--primary-color);
+  --txt-secondary:  var(--secondary-color);
+  --txt-default:    var(--default-color);
+
+  /*---------------*/
+  /* LAYOUT */
+  /*---------------*/
+  --sidebar-collapsed: 48px;
+  --sidebar-expanded: 256px;
+  --footer-h: 60px;
+  --header-h: 84px;
+
+  /*---------------*/
+  /* SPACING */
+  /*---------------*/
+  --sp-1: .25rem; //4px
+  --sp-2: .75rem; //12px
+  --sp-3: 1.5rem; //24px
+  --sp-4: 2.25rem; //36px
+  --sp-5: 3rem; //48px
+
+  /*---------------*/
+  /* BORDERS / SHADOWS */
+  /*---------------*/
+  --border: 1px solid var(--default-color);
+
+  --radius: 12px;
+  --radius-sm: 8px;
+
+  --shadow: 0 10px 24px rgba(0,0,0,.10);
+  --shadow-soft: 0 4px 10px rgba(0,0,0,.08);
+
+  /*---------------*/
+  /* TRANSITIONS */
+  /*---------------*/
+  --tr: .24s ease;
+}

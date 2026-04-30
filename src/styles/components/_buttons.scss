@@ -1,0 +1,48 @@
+/************* BUTTONS *************/
+.btn {
+  padding: 0.5rem 1rem;
+  border: var(--border);
+  border-radius: var(--radius);
+
+  &.primary {
+    font-weight: 700;
+    color: var(--body-color);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:hover {
+      color: var(--primary-color);
+      background: var(--body-color);
+    }
+  }
+
+  &.secondary {
+    background: var(--secondary-color);
+    border-color: var(--success-color);
+
+    &.active {
+      background: var(--success-color);
+      cursor: initial;
+
+      &:hover {
+        color: initial;
+        background: var(--success-color);
+      }
+    }
+
+    &:hover {
+      color: var(--success-color);
+      background: var(--body-color);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.btn-group {
+  display: flex;
+  gap: .5rem;
+}

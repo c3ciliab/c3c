@@ -1,0 +1,15 @@
+/*********** BASE ***********/
+
+body {
+  font-family: var(--font-sans);
+  color: var(--body-text);
+  background-color: var(--body-color);
+}
+
+app-root {
+  width: 100%;
+}
+
+a, button {
+  transition: var(--tr);
+}

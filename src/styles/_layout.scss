@@ -1,0 +1,52 @@
+/*********** LAYOUT ***********/
+//container, grid, wrappers
+
+/* PLACEHOLDERS */
+
+%flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+%block {
+  @extend %flexcol;
+  align-items: center;
+}
+
+/* BLOCKS */
+
+//full block centered
+.container {
+  @extend %block;
+  justify-content: center;
+  width: 100%;
+  min-height: 100dvh;
+}
+
+//router content
+.main {
+  padding: var(--sp-3);
+}
+
+.page-content {
+  @extend %flexcol;
+  gap: 2rem;
+}
+
+.content {
+  @extend %flexcol;
+  gap: 1rem;
+  width: 100%;
+}
+
+.scene {
+  display: flex;
+  gap: 1rem;
+}
+
+//grid
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
