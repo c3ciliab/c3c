@@ -3,7 +3,7 @@
 
 :root {
   /*---------------*/
-  /* COLORS */ /* https://coolors.co/211240-3f336d-e90171-22e1e5-ffffff-434b58-fae730-190d30-251747-2f2156 */
+  /* COLORS */ /* https://coolors.co/211240-3f336d-f1158f-22e1e5-ffffff-434b58-fae730-190d30-251747-2f2156 */
   /*---------------*/
   /* palette principale */
   --onyx:     #161616;
@@ -14,7 +14,7 @@
   /*---------------*/
   --dark-amethyst:    #211240;
   --twilight-indigo:  #3f336d;
-  --razzmatazz:       #e90171;
+  --barbie-pink:      #f1158f;
   --neon-ice:         #22e1e5;
   --bright-lemon:     #fae730;
   --charcoal-blue:    #434b58;
@@ -24,20 +24,16 @@
   /*---------------*/
   --primary-color:    var(--dark-amethyst);
   --secondary-color:  var(--twilight-indigo);
-  --accent-color:     var(--razzmatazz);
+  --accent-color:     var(--barbie-pink);
   --success-color:    var(--neon-ice);
   --alert-color:      var(--bright-lemon);
   --default-color:    var(--charcoal-blue);
   /*---------------*/ // @trier
   --accent:   #23b7ff;
-  --info:     #23b7ff;
-  --success:  #35d07f;
-  --warning:  #ffb84d;
-  --danger:   #ff5e7e;
-  --primary:  #7b2cff;
-  --secondary:#ff38c7;
   --accent-2: #9b5cff;
+  --info:     #7b2cff;
   --highlight:#ffd166;
+  --warning:  #ffb84d;
   /******************/
   --bg-primary:   var(--primary-color);
   --bg-secondary: var(--secondary-color);

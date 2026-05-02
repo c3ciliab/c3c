@@ -1,19 +1,4 @@
 .btn-next {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 48px;
-  padding: 0.875rem 1.25rem;
-  border: 1px solid rgba(255, 56, 199, 0.45);
-  border-radius: 999px;
-  background: rgba(19, 5, 42, 0.6);
-  color: var(--text-main);
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
 
   &:hover,
   &:focus-visible {

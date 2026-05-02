@@ -13,13 +13,14 @@
     display: flex;
     flex-direction: column;
     gap: var(--sp-1);
+    transform: translateY(72%);
   }
 }
 
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-2);
+  gap: .5rem;
   font: inherit;
   text-align: left;
   color: var(--txt-soft);
@@ -30,12 +31,11 @@
   &:hover,
   &:focus-visible,
   &.is-active {
-    color: #ff38c7;
-    //color: var(--accent-color);
+    color: var(--accent-color);
   }
 
   &.is-active .nav-dot {
-    background: #ff38c7;
+    background: var(--accent-color);
     box-shadow: 0 0 12px rgba(255, 56, 199, 0.7);
   }
 }
@@ -43,7 +43,7 @@
 .nav-dot {
   width: 10px;
   height: 10px;
-  border: 1px solid #ff38c7;
+  border: 1px solid var(--accent-color);
   border-radius: 2px;
   background: transparent;
 }
@@ -51,6 +51,7 @@
 .nav-label {
   font-family: "Pangolin", cursive;
   //font-family: "Bubbler One", sans-serif;
+  line-height: 1;
   text-transform: lowercase;
 }
 
