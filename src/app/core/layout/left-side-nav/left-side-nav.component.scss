@@ -1,6 +1,13 @@
+:host {
+  flex: 1;
+}
+
 .left-nav {
+  display: flex;
+  align-items: center;
   position: relative;
   z-index: 2;
+  height: 100%;
 
   ul {
     display: flex;
@@ -43,6 +50,7 @@
 
 .nav-label {
   font-family: "Pangolin", cursive;
+  //font-family: "Bubbler One", sans-serif;
   text-transform: lowercase;
 }
 
