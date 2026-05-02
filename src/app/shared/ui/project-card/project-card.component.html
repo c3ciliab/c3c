@@ -5,9 +5,9 @@
 
   <div class="project-card__content">
     <p class="project-card__meta">{{ project.client }} · {{ project.period }}</p>
-    <h4>
+    <h5>
       <a [routerLink]="['/', lang, 'project', project.slug]">{{ project.title }}</a>
-    </h4>
+    </h5>
     <p class="project-card__summary">{{ project.summary }}</p>
 
     <ul class="project-card__tags">

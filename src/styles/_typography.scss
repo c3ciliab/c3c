@@ -4,6 +4,8 @@
 :root {
   --font-sans: "Oxygen", sans-serif;
   --font-mono: "Oxygen Mono", monospace;
+  --font-bubbler: "Bubbler One", sans-serif;
+  --font-luckiest: "Luckiest Guy", cursive;
 }
 
 /* FONTS */
@@ -15,14 +17,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
 
 // VARIABLES
 $myriad: "myriad-pro", sans-serif;
 $oxygen: "Oxygen", sans-serif;
 $bubbler: "Bubbler One", sans-serif;
 $luckiest: "Luckiest Guy", cursive;
+$amatic: "Amatic SC", cursive;
 $pangolin: "Pangolin", cursive;
 $mono: "Oxygen Mono", monospace;
+$shadows: "Shadows Into Light", cursive;
+$shadowstwo: "Shadows Into Light Two", cursive;
 
 /* TEXT */
 
@@ -34,22 +40,24 @@ $lg-txt: 24px;
 $xl-txt: 28px;
 $xlg-txt: 32px;
 $xxl-txt: 60px;
+$xxlg-txt: 72px;
+$xxxl-txt: 80px;
 
 // Titles
 
 .brand {
   font-family: $luckiest;
-  font-size: 192px;
   line-height: 1;
+  font-size: 192px;
   letter-spacing: 0.01em;
   text-shadow: var(--shadow-lg);
 }
 
 // h1 => tagline
 .tagline {
-  font-family: "Amatic SC", sans-serif;
-  font-size: $xxl-txt;
+  font-family: $amatic;
   line-height: 1;
+  font-size: $xxl-txt;
   text-shadow: var(--shadow-lg);
 
   span {
@@ -67,13 +75,23 @@ h2 {
   font-size: $md-txt;
 }
 
-h3 {
+h3, .h3 {
   font-family: $luckiest;
-  font-size: $lg-txt;
+  line-height: 1;
+  font-size: $xl-txt;
   text-transform: uppercase;
 }
 
 h4 {
+  font-family: $shadows;
+  line-height: 1;
+  font-size: $xxlg-txt;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-variant-caps: small-caps;
+}
+
+h5 {
   font-family: $bubbler;
   font-size: $xlg-txt;
   font-weight: 700;

@@ -77,11 +77,13 @@
   --sp-3: 1.5rem; //24px
   --sp-4: 2.25rem; //36px
   --sp-5: 3rem; //48px
+  --sp-6: 3.75rem; //60px
 
   /*---------------*/
   /* TRACKING */
   /*---------------*/
   --tr-tighter: -0.03em;
+  --tr-tight: -0.01em;
   --tr-tiny: 0.01em;
   --tr-wide: 0.025em;
 
@@ -119,6 +121,14 @@
   -1px -1px 0px var(--accent-color),
   0px 1px 0px var(--accent-color),
   0px -1px 0px var(--accent-color);
+  --shadow-border-amethyst: 1px 0px 0px var(--primary-color),
+  1px 1px 0px var(--primary-color),
+  1px -1px 0px var(--primary-color),
+  -1px 1px 0px var(--primary-color),
+  -1px 0px 0px var(--primary-color),
+  -1px -1px 0px var(--primary-color),
+  0px 1px 0px var(--primary-color),
+  0px -1px 0px var(--primary-color);
 
   /*---------------*/
   /* TRANSITIONS */
