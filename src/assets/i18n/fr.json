@@ -12,6 +12,15 @@
     "next": "suite"
   },
 
+  "next": {
+    "start": "press start",
+    "services": "prestations",
+    "portfolio": "portfolio",
+    "journey": "parcours",
+    "contact": "contact",
+    "home": "back to top"
+  },
+
   "home": {
     "title": {
       "dev": "développeuse front",
@@ -25,6 +34,24 @@
   },
 
   "about": {
+    "kicker": "profil hybride",
+    "title": {
+      "segment-1": "du",
+      "segment-2": "design",
+      "segment-3": "au",
+      "segment-4": "développement"
+    },
+    "subtitle-1": {
+      "segment-1": "je conçois des",
+      "segment-2": "expériences web",
+      "segment-3": "et applicatives"
+    },
+    "subtitle-2": {
+      "segment-1": "claires",
+      "segment-2": "cohérentes",
+      "segment-3": "et",
+      "segment-4": "production ready"
+    },
     "skill": {
       "flex": {
         "title": "polyvalence",
@@ -43,17 +70,13 @@
         "text": ["autodidacte", "veille continue", "curiosité technologique"]
       }
     },
-    "title": "Profil hybride",
-    "subtitle": "Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire",
-    "long": "Je conçois et développe des interfaces web et applicatives",
-    "intro": "Je conçois et développe des interfaces web et applicatives. Entre design et développement, j’interviens sur toute la chaîne de production",
-    "body": "J’accompagne les projets de l’analyse au prototype, jusqu’à l’intégration et à la structuration des interfaces. Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire"
+    "intro": "front-end, intégration, UX/UI, design system,"
   },
 
   "services": {
-    "kicker": "Prestations",
-    "title": "Une expertise transverse, du cadrage à l’intégration",
-    "intro": "Je conçois, structure et développe des interfaces utiles, lisibles et maintenables, avec une approche qui relie design, UX et front-end",
+    "kicker": "prestations",
+    "title": "une expertise transverse, du cadrage à l’intégration",
+    "intro": "j’accompagne les projets sur toute la chaîne de production et transforme les besoins en solutions concrètes, de l’analyse au prototype jusqu’à l’intégration, la structuration du produit, et la mise en cohérence des parcours, des composants et des écrans",
     "frontend": {
       "title": "Développement front-end",
       "text": "Développement d’interfaces modernes, maintenables et cohérentes, avec une attention forte à la qualité du code et à l’expérience utilisateur"

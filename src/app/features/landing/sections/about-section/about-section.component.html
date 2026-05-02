@@ -1,27 +1,49 @@
 <section id="about" class="screen-section" data-section appSectionAnchor sectionId="about">
 
-  <div class="visual" appParallaxLayer [speed]="0.2" axis="y">
-    <img src="assets/img/icec.png" alt="icec" />
-  </div>
+  <figure class="visual" appParallaxLayer [speed]="0.2" axis="y">
+    <img class="cut-out" src="assets/img/icec.png" alt="icec" />
+  </figure>
+
+  <header class="section-header">
+    <h4>{{ t('about.kicker') }}</h4>
+    <img src="assets/img/icons/arrow.png" alt="arrow" />
+  </header>
 
   <aside class="prop">
-    <h4>{{ t('about.title') }}</h4>
+    <h3>
+      {{ t('about.title.segment-1') }}
+      <span>{{ t('about.title.segment-2') }}</span>
+      {{ t('about.title.segment-3') }}
+      <span>{{ t('about.title.segment-4') }}</span>
+    </h3>
+    <p class="h3">
+      {{ t('about.subtitle-1.segment-1') }}
+      <span>{{ t('about.subtitle-1.segment-2') }}</span>
+      {{ t('about.subtitle-1.segment-3') }}
+    </p>
+    <p class="h3">
+      <span>{{ t('about.subtitle-2.segment-1') }}</span>,
+      <span>{{ t('about.subtitle-2.segment-2') }}</span>
+      {{ t('about.subtitle-2.segment-3') }}
+      <span>{{ t('about.subtitle-2.segment-4') }}</span>
+    </p>
+    <!--
     <p>{{ t('about.intro') }}</p>
-    <p>{{ t('about.body') }}</p>
+    <p>{{ t('about.body') }}</p> -->
   </aside>
 
   <div class="about-content">
     <div class="left-c in-content">
-      <app-skill-item [skill]="skillsById['poulpe']" />
-      <app-skill-item [skill]="skillsById['xp']" />
+      <app-skill-item [skill]="skillsById['poulpe']"></app-skill-item>
+      <app-skill-item [skill]="skillsById['xp']"></app-skill-item>
     </div>
     <div class="right-c in-content">
-      <app-skill-item [skill]="skillsById['brain-l']" />
-      <app-skill-item [skill]="skillsById['brain-r']" />
+      <app-skill-item [skill]="skillsById['brain-l']"></app-skill-item>
+      <app-skill-item [skill]="skillsById['brain-r']"></app-skill-item>
     </div>
   </div>
 
   <div class="next">
-    <app-next-section-button currentSectionId="about" />
+    <app-next-section-button currentSectionId="about" labelKey="next.services" />
   </div>
 </section>
