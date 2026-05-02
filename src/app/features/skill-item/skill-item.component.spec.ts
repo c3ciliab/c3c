@@ -1,0 +1,22 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { SkillItemComponent } from './skill-item.component';
+
+describe('SkillItemComponent', () => {
+  let component: SkillItemComponent;
+  let fixture: ComponentFixture<SkillItemComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [SkillItemComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(SkillItemComponent);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

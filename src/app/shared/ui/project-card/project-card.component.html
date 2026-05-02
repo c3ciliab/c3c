@@ -1,0 +1,19 @@
+<article class="project-card glass-panel">
+  <a class="project-card__image-link" [routerLink]="['/', lang, 'project', project.slug]">
+    <img [src]="project.cover" [alt]="project.title" />
+  </a>
+
+  <div class="project-card__content">
+    <p class="project-card__meta">{{ project.client }} · {{ project.period }}</p>
+    <h4>
+      <a [routerLink]="['/', lang, 'project', project.slug]">{{ project.title }}</a>
+    </h4>
+    <p class="project-card__summary">{{ project.summary }}</p>
+
+    <ul class="project-card__tags">
+      @for (tag of project.tags; track tag) {
+        <li>{{ tag }}</li>
+      }
+    </ul>
+  </div>
+</article>

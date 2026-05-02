@@ -1,0 +1,9 @@
+<div class="block-content">
+  <img [src]="'assets/img/icons/' + skill.id + '.png'" [alt]="skill.id" />
+  <h3>{{ t(skill.titleKey) }}</h3>
+  <p class="container hidden absolute">
+    @for (text of tList(skill.textKey); track text) {
+      <span class="nowrap">{{ text }}</span>
+    }
+  </p>
+</div>
