@@ -46,7 +46,7 @@
 .btn {
   padding: .875rem 1.25rem;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
 
   &.btn-switch {
     min-width: 44px;
@@ -96,5 +96,19 @@
 
   &.sm {
     gap: .5rem;
+  }
+}
+
+/************* TAGS / CHIPS / ... *************/
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+
+  .tag {
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.07);
   }
 }

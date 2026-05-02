@@ -21,15 +21,20 @@
 %fullcentered {
   @extend %blockcentered;
   width: 100%;
-  min-height: 100dvh;
 }
 
 /* BLOCKS */
+
+.container {
+  @extend %fullcentered;
+  height: 100%;
+}
 
 .screen-section {
   @extend %fullcentered;
   position: relative;
   z-index: 1;
+  min-height: 100dvh;
   //padding: 4rem 6rem;
   scroll-snap-align: start;
 
@@ -38,6 +43,15 @@
     flex: 1;
     max-width: 100%;
     //height: 100svh;
+  }
+
+  .inner {
+    @extend %flexcol;
+    flex: 1;
+    justify-content: center;
+    gap: var(--sp-4);
+    padding-inline: var(--sidebar); /* prevent content from being hidden behind sidebar */
+    padding-bottom: var(--footer-btn); /* prevent content from being hidden behind next button */
   }
 
   .next {
@@ -50,30 +64,22 @@
 }
 
 /* BLOCKS
-
-//full block centered
-.container {
-  @extend %block;
-  justify-content: center;
-  width: 100%;
-  min-height: 100dvh;
-}
-
 //router content
 .main {
   padding: var(--sp-3);
 }
-
 .page-content {
   @extend %flexcol;
   gap: 2rem;
 }
-
 .scene {
   display: flex;
   gap: 1rem;
 }
-
+.container {
+  width: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
+}
 //grid
 .row {
   display: grid;

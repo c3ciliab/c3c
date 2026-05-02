@@ -1,12 +1,22 @@
 //classes utilitaires (sr-only etc.)
 
-/*
-.container {
-  width: min(1200px, calc(100% - 2rem));
-  margin-inline: auto;
-}
-*/
+/* TOOLS */
 
+// layout
+.hidden {
+  display: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+// position
+.nowrap {
+  white-space: nowrap;
+}
+
+/* TEMP */
 .glass-panel {
   background: rgba(20, 10, 45, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -24,4 +34,9 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.container-wide {
+  width: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
 }

@@ -14,11 +14,14 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 // VARIABLES
 $myriad: "myriad-pro", sans-serif;
 $oxygen: "Oxygen", sans-serif;
 $bubbler: "Bubbler One", sans-serif;
+$luckiest: "Luckiest Guy", cursive;
+$pangolin: "Pangolin", cursive;
 $mono: "Oxygen Mono", monospace;
 
 /* TEXT */
@@ -35,7 +38,7 @@ $xxl-txt: 60px;
 // Titles
 
 .brand {
-  font-family: "Luckiest Guy", cursive;
+  font-family: $luckiest;
   font-size: 192px;
   line-height: 1;
   letter-spacing: 0.01em;
@@ -54,39 +57,36 @@ $xxl-txt: 60px;
       letter-spacing: var(--tr-tighter);
     }
 
-    &:nth-of-type(2) {
-      letter-spacing: var(--tr-wide);
-    }
-
     &:last-of-type {
-      letter-spacing: var(--tr-tiny);
+      letter-spacing: var(--tr-wide);
     }
   }
 }
 
 h2 {
+  font-size: $md-txt;
+}
+
+h3 {
+  font-family: $luckiest;
+  font-size: $lg-txt;
+  text-transform: uppercase;
+}
+
+h4 {
   font-family: $bubbler;
   font-size: $xlg-txt;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-h3 {
-  font-size: $md-txt;
-}
-
-h4 {
-  font-size: $md-txt;
-}
-
 // Other texts
-label, .label {
+label, .label, .tag, .subtitle {
   font-size: $sm-txt;
 }
 
-.subtitle {
-  color: var(--text-soft);
-  font-size: $sm-txt;
+.subtitle, .soft-txt {
+  color: var(--txt-soft);
 }
 
 .subtext {
@@ -100,7 +100,14 @@ label, .label {
   opacity: .7;
 }
 
-// Styles
+// temp styles
+.section-kicker {
+  color: var(--accent-color);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
 @mixin brand-txt($style: italic) {
     font-family: $myriad;
     font-style: $style;
