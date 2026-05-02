@@ -1,4 +1,7 @@
-<button type="button" class="btn btn-next" (click)="next()">
+<button type="button" class="btn btn-next" [class.is-back-to-top]="isBackToTop" [attr.aria-label]="label()" (click)="next()">
   <span>{{ label() }}</span>
-  <span aria-hidden="true">↓</span>
+
+  @if (direction !== 'none') {
+    <span class="next-icon" aria-hidden="true">{{ icon() }}</span>
+  }
 </button>

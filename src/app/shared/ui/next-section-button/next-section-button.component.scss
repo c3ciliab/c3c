@@ -1,0 +1,73 @@
+.btn-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid rgba(255, 56, 199, 0.45);
+  border-radius: 999px;
+  background: rgba(19, 5, 42, 0.6);
+  color: var(--text-main);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(255, 56, 199, 0.35);
+  }
+
+  .next-icon {
+    display: inline-block;
+    transition: transform 220ms ease;
+  }
+
+  &:hover .next-icon,
+  &:focus-visible .next-icon {
+    transform: translateY(2px);
+  }
+
+  &.is-back-to-top {
+    border-color: rgba(35, 183, 255, 0.45);
+    box-shadow: 0 0 14px rgba(35, 183, 255, 0.12);
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 0 22px rgba(35, 183, 255, 0.28);
+    }
+
+    .next-icon {
+      animation: float-up 1.8s ease-in-out infinite;
+    }
+
+    &:hover .next-icon,
+    &:focus-visible .next-icon {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+@keyframes float-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-next,
+  .next-icon {
+    transition: none;
+  }
+
+  .btn-next.is-back-to-top .next-icon {
+    animation: none;
+  }
+}

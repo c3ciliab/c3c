@@ -16,7 +16,7 @@
       @for (item of items; track item.id) {
         <article class="journey-item glass-panel">
           <p class="journey-item__period">{{ item.period }}</p>
-          <h4>{{ item.title }}</h4>
+          <h5>{{ item.title }}</h5>
           <p class="journey-item__company">{{ item.company }}</p>
           <p>{{ item.summary }}</p>
 
@@ -31,6 +31,6 @@
   </div>
 
   <div class="journey-section__next">
-    <app-next-section-button currentSectionId="journey" />
+    <app-next-section-button currentSectionId="journey" labelKey="next.contact"/>
   </div>
 </section>

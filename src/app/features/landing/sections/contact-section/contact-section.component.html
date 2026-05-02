@@ -7,7 +7,7 @@
 
   <div class="contact-section__inner glass-panel">
     <p class="section-kicker">{{ t('contact.kicker') }}</p>
-    <h4>{{ t('contact.title') }}</h4>
+    <h5>{{ t('contact.title') }}</h5>
     <p>{{ t('contact.intro') }}</p>
 
     <div class="contact-actions">
@@ -15,5 +15,9 @@
       <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
       <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
     </div>
+  </div>
+
+  <div class="next">
+    <app-next-section-button currentSectionId="contact" goToSectionId="home" labelKey="next.home" direction="up" [isBackToTop]="true" />
   </div>
 </section>
