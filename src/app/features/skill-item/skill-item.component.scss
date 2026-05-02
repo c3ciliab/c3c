@@ -1,3 +1,7 @@
+:host {
+  position: relative;
+}
+
 .block-content {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,41 @@
     }
 
     img {
-      opacity: .2;
+      opacity: .24;
+    }
+  }
+}
+
+.block-arrow {
+  position: absolute;
+  width: 84px;
+  opacity: .6;
+
+  &.left-b {
+    &.top-b {
+      right: -72%;
+      bottom: -48px;
+      width: 96px;
+      transform: rotate(180deg);
+    }
+
+    &.bot-b {
+      top: -24px;
+      right: -48%;
+      transform: rotate(112deg);
+    }
+  }
+
+  &.right-b {
+    &.top-b {
+      bottom: -24px;
+      left: -60%;
+      transform: rotate(-60deg);
+    }
+
+    &.bot-b {
+      top: -36px;
+      left: -48%;
     }
   }
 }

@@ -9,4 +9,5 @@ export interface SkillItem {
   id: string;
   titleKey: string;
   textKey: string;
+  class: string;
 }
