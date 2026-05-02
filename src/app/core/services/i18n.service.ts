@@ -42,6 +42,22 @@ export class I18nService {
     return typeof value === 'string' ? value : key;
   }
 
+  tList(key: string): string[] {
+    const value = this.resolveKey(key);
+    return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : [];
+  }
+
+  private resolveKey(key: string): unknown {
+    const dictionary = this.dictionarySignal();
+
+    return key.split('.').reduce<unknown>((acc, part) => {
+      if (acc && typeof acc === 'object' && part in acc) {
+        return (acc as Record<string, unknown>)[part];
+      }
+      return undefined;
+    }, dictionary);
+  }
+
   private async load(lang: AppLang): Promise<void> {
     const dictionary = await firstValueFrom(
       this.http.get<I18nDictionary>(`assets/i18n/${lang}.json`),

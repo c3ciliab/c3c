@@ -14,21 +14,79 @@
 
   "home": {
     "title": {
-      "dev": "Développement Front",
-      "integration": "Intégration Web",
-      "design": "Web UX/UI design",
-      "long": "Je conçois et développe des interfaces web et applicatives"
+      "dev": "développeuse front",
+      "integration": "intégratrice web",
+      "design": "UX/UI designer"
     },
-    "subtitle": "Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire",
     "cta": {
-      "projects": "Voir mes projets",
-      "contact": "Me contacter"
+      "projects": "voir mes projets",
+      "contact": "me contacter"
     }
   },
 
   "about": {
+    "skill": {
+      "flex": {
+        "title": "polyvalence",
+        "text": ["vision transverse", "expériences complémentaires", "solutions sur mesure"]
+      },
+      "xp": {
+        "title": "expérience",
+        "text": ["6 ans en entreprise", "freelance depuis 2011"]
+      },
+      "discipline": {
+        "title": "rigueur",
+        "text": ["specs & process", "pixel perfect", "standards web"]
+      },
+      "passion": {
+        "title": "passion",
+        "text": ["autodidacte", "veille continue", "curiosité technologique"]
+      }
+    },
     "title": "Profil hybride",
+    "subtitle": "Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire",
+    "long": "Je conçois et développe des interfaces web et applicatives",
     "intro": "Je conçois et développe des interfaces web et applicatives. Entre design et développement, j’interviens sur toute la chaîne de production",
     "body": "J’accompagne les projets de l’analyse au prototype, jusqu’à l’intégration et à la structuration des interfaces. Front-end, intégration, UX/UI, design systems : un profil hybride pour transformer les besoins en interfaces claires, cohérentes et prêtes à produire"
+  },
+
+  "services": {
+    "kicker": "Prestations",
+    "title": "Une expertise transverse, du cadrage à l’intégration",
+    "intro": "Je conçois, structure et développe des interfaces utiles, lisibles et maintenables, avec une approche qui relie design, UX et front-end",
+    "frontend": {
+      "title": "Développement front-end",
+      "text": "Développement d’interfaces modernes, maintenables et cohérentes, avec une attention forte à la qualité du code et à l’expérience utilisateur"
+    },
+    "integration": {
+      "title": "Intégration web",
+      "text": "Intégration fidèle aux maquettes, responsive, robuste et pensée pour la production réelle"
+    },
+    "uxui": {
+      "title": "UX/UI design",
+      "text": "Wireframes, maquettes, prototypes, hiérarchie visuelle et cohérence d’interface au service d’usages concrets"
+    },
+    "systems": {
+      "title": "Design systems",
+      "text": "Structuration de composants, règles UI et documentation pour fiabiliser les projets et faciliter les évolutions"
+    }
+  },
+
+  "projects": {
+    "kicker": "Projets",
+    "title": "Quelques missions et réalisations récentes",
+    "intro": "Des projets où se croisent intégration, front-end, UX/UI, dashboards, applications et structuration produit"
+  },
+
+  "journey": {
+    "kicker": "Parcours",
+    "title": "Un parcours construit entre design, intégration et front-end",
+    "intro": "Une trajectoire qui m’a permis de construire un profil hybride, capable de passer du cadrage à la production"
+  },
+
+  "contact": {
+    "kicker": "Contact",
+    "title": "Parlons de votre projet",
+    "intro": "Mission freelance, renfort front-end, cadrage UX/UI, prototype ou design system : je peux vous accompagner sur des besoins variés"
   }
 }
