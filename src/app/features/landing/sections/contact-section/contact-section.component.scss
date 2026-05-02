@@ -1,0 +1,30 @@
+.contact-section {
+  align-items: center;
+
+  &__inner {
+    width: min(760px, 100%);
+    margin-inline: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.875rem 1.25rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    text-decoration: none;
+  }
+}

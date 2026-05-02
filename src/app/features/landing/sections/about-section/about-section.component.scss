@@ -1,11 +1,4 @@
-.about-section {
-  display: flex;
-  align-items: center;
-  position: relative;
-  //display: grid;
-  //grid-template-columns: minmax(320px, 560px) 1fr;
-  //gap: 3rem;
-
+.screen-section {
   .visual {
     display: flex;
     align-items: center;
@@ -29,6 +22,21 @@
 
   .about-content {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100dvh;
+    padding-inline: var(--sidebar); /* prevent content from being hidden behind sidebar */
+    padding-block: var(--footer-btn); /* prevent content from being hidden behind next button */
+
+    .in-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .prop {
+    display: flex;
     flex-direction: column;
     gap: .75rem;
     position: absolute;
@@ -43,11 +51,10 @@
 }
 
 @media (max-width: 1000px) {
-  .about-section {
+  .screen-section {
     //grid-template-columns: 1fr;
 
     .visual {
-      position: absolute;
       right: -10%;
       bottom: 14%;
       width: 55vw;

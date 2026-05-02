@@ -1,1 +1,32 @@
-<p>services-section.component works!</p>
+<section id="services" class="screen-section" data-section appSectionAnchor sectionId="services">
+
+  <div class="inner">
+
+    <header class="header">
+      <p class="section-kicker">{{ t('services.kicker') }}</p>
+      <h4>{{ t('services.title') }}</h4>
+      <p>{{ t('services.intro') }}</p>
+    </header>
+
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <app-glow-card>
+          <article class="service-card">
+            <h2>{{ t(service.titleKey) }}</h2>
+            <p>{{ t(service.textKey) }}</p>
+
+            <ul class="tag-list">
+              @for (tag of service.tags; track tag) {
+                <li class="tag">{{ tag }}</li>
+              }
+            </ul>
+          </article>
+        </app-glow-card>
+      }
+    </div>
+  </div>
+
+  <div class="next">
+    <app-next-section-button currentSectionId="services" />
+  </div>
+</section>

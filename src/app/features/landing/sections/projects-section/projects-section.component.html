@@ -1,1 +1,20 @@
-<p>projects-section.component works!</p>
+<section id="portfolio" class="screen-section projects-section" data-section appSectionAnchor sectionId="portfolio">
+
+  <div class="inner">
+    <header class="header">
+      <p class="section-kicker">{{ t('projects.kicker') }}</p>
+      <h4>{{ t('projects.title') }}</h4>
+      <p>{{ t('projects.intro') }}</p>
+    </header>
+
+    <div class="projects-grid">
+      @for (project of projects(); track project.id) {
+        <app-project-card [project]="project" [lang]="lang()" />
+      }
+    </div>
+  </div>
+
+  <div class="next">
+    <app-next-section-button currentSectionId="portfolio" />
+  </div>
+</section>

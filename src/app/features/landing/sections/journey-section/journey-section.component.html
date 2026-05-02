@@ -1,1 +1,36 @@
-<p>journey-section.component works!</p>
+<section
+  id="journey"
+  class="screen-section journey-section"
+  data-section
+  appSectionAnchor
+  sectionId="journey">
+
+  <div class="journey-section__inner">
+    <header class="journey-section__header">
+      <p class="section-kicker">{{ t('journey.kicker') }}</p>
+      <h2>{{ t('journey.title') }}</h2>
+      <p>{{ t('journey.intro') }}</p>
+    </header>
+
+    <div class="journey-list">
+      @for (item of items; track item.id) {
+        <article class="journey-item glass-panel">
+          <p class="journey-item__period">{{ item.period }}</p>
+          <h4>{{ item.title }}</h4>
+          <p class="journey-item__company">{{ item.company }}</p>
+          <p>{{ item.summary }}</p>
+
+          <ul>
+            @for (tag of item.tags; track tag) {
+              <li>{{ tag }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </div>
+
+  <div class="journey-section__next">
+    <app-next-section-button currentSectionId="journey" />
+  </div>
+</section>
