@@ -2,11 +2,19 @@ export interface ProjectItem {
   id: string;
   slug: string;
   title: string;
-  category: string;
+  category?: string;
   client?: string;
-  year: string;
+  sector: string;
+  period: string;
+  year?: string;
+  role: string[];
   summary: string;
-  cover: string;
+  excerpt?: string;
+  problem: string;
+  approach: string[];
+  deliverables: string[];
+  stack: string[];
   tags: string[];
   featured: boolean;
+  cover: string;
 }
