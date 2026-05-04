@@ -1,5 +1,5 @@
 import { Component, computed, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { I18nService, AppLang } from '../../services/i18n.service';
 import { RouteContextService } from '../../services/route-context.service';
 
@@ -13,12 +13,12 @@ import { RouteContextService } from '../../services/route-context.service';
 export class LanguageSwitcherComponent {
   private readonly i18n = inject(I18nService);
   private readonly router = inject(Router);
-  private readonly route = inject(ActivatedRoute);
   private readonly routeContext = inject(RouteContextService);
 
   readonly currentLang = computed(() => this.i18n.lang());
 
   async switchTo(lang: AppLang): Promise<void> {
+    const currentFragment = window.location.hash.replace('#', '');
     const mode = this.routeContext.mode();
     const secondaryPage = this.routeContext.secondaryPage();
     const fragment = this.routeContext.currentFragment();
@@ -31,7 +31,8 @@ export class LanguageSwitcherComponent {
     }
 
     await this.router.navigate(['/', lang], {
-      fragment: fragment || undefined,
+      fragment: currentFragment || 'home',
+      //fragment: fragment || undefined,
     });
   }
 }
