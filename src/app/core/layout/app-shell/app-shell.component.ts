@@ -1,9 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { LeftSideNavComponent } from '../left-side-nav/left-side-nav.component';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
-//import { AnotherUniversePageComponent } from '../../../features/landing/pages/another-universe-page/another-universe-page.component';
 import { PspadButtonComponent } from "../../../shared/ui/pspad-button/pspad-button.component";
 
 @Component({
@@ -14,7 +13,6 @@ import { PspadButtonComponent } from "../../../shared/ui/pspad-button/pspad-butt
     RouterLink,
     LeftSideNavComponent,
     LanguageSwitcherComponent,
-    //AnotherUniversePageComponent,
     PspadButtonComponent
 ],
   templateUrl: './app-shell.component.html',
@@ -23,4 +21,10 @@ import { PspadButtonComponent } from "../../../shared/ui/pspad-button/pspad-butt
 export class AppShellComponent {
   @Input() mode: 'portfolio' | 'standalone' = 'portfolio';
   @Input() showLanguageSwitcher = false;
+
+  readonly isMenuOpen = signal(false);
+
+  toggleMenu(): void {
+    this.isMenuOpen.update((value) => !value);
+  }
 }
