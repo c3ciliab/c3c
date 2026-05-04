@@ -16,7 +16,7 @@ export class LeftSideNavComponent {
   private readonly i18n = inject(I18nService);
   private readonly activeSection = inject(ActiveSectionService);
   private readonly sectionScroll = inject(SectionScrollService);
- private readonly router = inject(Router);
+  private readonly router = inject(Router);
 
   readonly items = NAV_ITEMS;
   readonly currentLang = computed(() => this.i18n.lang());

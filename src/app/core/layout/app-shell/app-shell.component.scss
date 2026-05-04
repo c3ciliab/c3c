@@ -50,14 +50,23 @@
   left: 0;
 
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     z-index: 20;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 56, 199, 0.45);
+    border-radius: var(--radius-full);
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease,
+      border-color 180ms ease;
 
     svg {
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 32px;
       fill: var(--accent-color);
       opacity: 0.48;
       transition: var(--tr);
@@ -74,7 +83,9 @@
     }
 
     &.triangle {
+      align-items: initial;
       top: 20px;
+      padding-top: 2.4px;
     }
 
     &.circle {
@@ -87,9 +98,17 @@
 
     &.square {
       left: 20px;
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
     }
 
     &:hover {
+      //transform: translateY(-2px);
+      box-shadow: 0 0 18px rgba(255, 56, 199, 0.35);
+
       svg {
         opacity: 0.8;
       }

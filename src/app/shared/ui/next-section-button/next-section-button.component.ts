@@ -1,11 +1,12 @@
 import { Component, Input, inject } from '@angular/core';
 import { I18nService } from '../../../core/services/i18n.service';
 import { SectionScrollService } from '../../../core/services/section-scroll.service';
+import { PspadButtonComponent } from "../../../shared/ui/pspad-button/pspad-button.component";
 
 @Component({
   selector: 'app-next-section-button',
   standalone: true,
-  imports: [],
+  imports: [PspadButtonComponent],
   templateUrl: './next-section-button.component.html',
   styleUrl: './next-section-button.component.scss',
 })
