@@ -5,7 +5,7 @@
   border: var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-glow-purple);
-  backdrop-filter: blur(12px);
+  backdrop-filter: var(--back-f-blur);
 /*
   &:hover {
     background: linear-gradient(135deg, var(--info) 0%, var(--accent-color) 55%, var(--success-color) 100%);

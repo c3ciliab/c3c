@@ -60,7 +60,7 @@
     flex-direction: row;
     align-items: center;
     background: rgba(10, 3, 24, 0.78);
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--back-f-blur);
   }
 
   .shell-main {

@@ -79,7 +79,7 @@
     gap: .5rem;
     border-color: rgba(255, 56, 199, 0.45);
     background: rgba(19, 5, 42, 0.6);
-    backdrop-filter: blur(10px);
+    backdrop-filter: var(--back-f-blur);
     transition:
       transform 180ms ease,
       box-shadow 180ms ease,
