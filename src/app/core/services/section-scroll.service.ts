@@ -5,10 +5,7 @@ export class SectionScrollService {
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
 
-    if (!element) {
-      console.warn(`[scrollToSection] section introuvable: ${sectionId}`);
-      return;
-    }
+    if (!element) return;
 
     element.scrollIntoView({
       behavior: 'smooth',
@@ -19,14 +16,17 @@ export class SectionScrollService {
   }
 
   goToNextSection(currentSectionId: string): void {
-    const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-section]'));
-    const currentIndex = sections.findIndex((section) => section.id === currentSectionId);
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-section]'),
+    );
+
+    const currentIndex = sections.findIndex(
+      (section) => section.id === currentSectionId,
+    );
+
     const nextSection = sections[currentIndex + 1];
 
-    if (!nextSection) {
-      console.warn(`[goToNextSection] aucune section suivante après ${currentSectionId}`);
-      return;
-    }
+    if (!nextSection) return;
 
     nextSection.scrollIntoView({
       behavior: 'smooth',

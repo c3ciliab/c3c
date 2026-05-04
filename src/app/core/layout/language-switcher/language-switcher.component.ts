@@ -1,6 +1,7 @@
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { I18nService, AppLang } from '../../services/i18n.service';
+import { RouteContextService } from '../../services/route-context.service';
 
 @Component({
   selector: 'app-language-switcher',
@@ -13,24 +14,24 @@ export class LanguageSwitcherComponent {
   private readonly i18n = inject(I18nService);
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
+  private readonly routeContext = inject(RouteContextService);
 
   readonly currentLang = computed(() => this.i18n.lang());
 
   async switchTo(lang: AppLang): Promise<void> {
-    const currentFragment = window.location.hash.replace('#', '');
-    const url = this.router.url.split('#')[0];
-    const segments = url.split('/').filter(Boolean);
-
-    const currentRouteLang = segments[0];
-    const restOfPath =
-      currentRouteLang === 'fr' || currentRouteLang === 'en'
-        ? segments.slice(1)
-        : segments;
+    const mode = this.routeContext.mode();
+    const secondaryPage = this.routeContext.secondaryPage();
+    const fragment = this.routeContext.currentFragment();
 
     await this.i18n.setLang(lang);
 
-    await this.router.navigate(['/', lang, ...restOfPath], {
-      fragment: currentFragment || undefined,
+    if (mode === 'standalone' && secondaryPage === 'another-universe') {
+      await this.router.navigate(['/', lang, 'another-universe']);
+      return;
+    }
+
+    await this.router.navigate(['/', lang], {
+      fragment: fragment || undefined,
     });
   }
 }

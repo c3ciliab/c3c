@@ -3,6 +3,7 @@ import { Router, RouterLink } from '@angular/router';
 import { NAV_ITEMS } from '../../../data/navigation.data';
 import { ActiveSectionService } from '../../services/active-section.service';
 import { I18nService } from '../../services/i18n.service';
+import { RouteContextService } from '../../services/route-context.service';
 import { SectionScrollService } from '../../services/section-scroll.service';
 
 @Component({
@@ -17,29 +18,22 @@ export class LeftSideNavComponent {
   private readonly activeSection = inject(ActiveSectionService);
   private readonly sectionScroll = inject(SectionScrollService);
   private readonly router = inject(Router);
+  readonly routeContext = inject(RouteContextService);
 
   readonly items = NAV_ITEMS;
   readonly activeId = computed(() => this.activeSection.activeSection());
 
-  readonly currentUrl = computed(() => this.router.url);
-
-  readonly currentLang = computed<'fr' | 'en'>(() => {
-    const firstSegment = this.router.url.split('/')[1];
-    return firstSegment === 'en' ? 'en' : 'fr';
-  });
-
-  readonly navMode = computed<'portfolio' | 'standalone'>(() => {
-    return this.router.url.includes('/another-universe')
-      ? 'standalone'
-      : 'portfolio';
-  });
+  readonly navMode = computed(() => this.routeContext.mode());
+  readonly currentLang = computed(() => this.routeContext.currentLang());
+  readonly currentFragment = computed(() => this.routeContext.currentFragment());
+  readonly secondaryPage = computed(() => this.routeContext.secondaryPage());
 
   readonly standaloneActiveKey = computed<'portfolio' | 'journey' | 'another-universe'>(() => {
-    if (this.router.url.includes('/another-universe')) {
+    if (this.secondaryPage() === 'another-universe') {
       return 'another-universe';
     }
 
-    if (this.router.url.includes('#journey')) {
+    if (this.currentFragment() === 'journey') {
       return 'journey';
     }
 
@@ -55,6 +49,6 @@ export class LeftSideNavComponent {
     if (this.activeId() === sectionId) return;
 
     this.sectionScroll.scrollToSection(sectionId);
-    history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
+    //history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
   }
 }
