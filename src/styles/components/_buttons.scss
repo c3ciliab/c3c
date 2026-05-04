@@ -1,53 +1,90 @@
-/************* BUTTONS ************
+/************* BUTTONS *************/
+//buttons, tags, chips, ...
+
+/* PLACEHOLDERS */
+
+//btn default
+%btn,
 .btn {
-  padding: 0.5rem 1rem;
-  border: var(--border);
-  border-radius: var(--radius);
-
-  &.primary {
-    font-weight: 700;
-    color: var(--body-color);
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-
-    &:hover {
-      color: var(--primary-color);
-      background: var(--body-color);
-    }
-  }
-
-  &.secondary {
-    background: var(--secondary-color);
-    border-color: var(--success-color);
-
-    &.active {
-      background: var(--success-color);
-      cursor: initial;
-
-      &:hover {
-        color: initial;
-        background: var(--success-color);
-      }
-    }
-
-    &:hover {
-      color: var(--success-color);
-      background: var(--body-color);
-    }
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-}
-*/
-
-.btn {
-  padding: .875rem 1.25rem;
+  padding: .75rem 1rem;
   border: 1px solid transparent;
   border-radius: var(--radius-full);
+}
 
+//btn primary
+%btn-primary,
+.btn-primary {
+  @extend %btn;
+  border-color: rgba(255, 56, 199, 0.6);
+  background: rgba(19, 5, 42, 0.6);
+  backdrop-filter: var(--back-f-blur);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+    opacity: 180ms ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(2px);
+    box-shadow: 0 0 18px rgba(255, 56, 199, 0.35);
+  }
+}
+
+//btn secondary
+%btn-secondary,
+.btn-secondary {
+  @extend %btn;
+}
+
+//specific btn styles
+.btn-next {
+  @extend %btn-primary;
+  font-family: var(--font-play);
+  font-size: 20px;
+}
+
+.btn-start {
+  font-size: 24px;
+  text-transform: uppercase;
+  border-color: transparent;
+  background: transparent;
+  -webkit-animation: blink 1.12s ease infinite;
+  animation: blink 1.12s ease infinite;
+
+  &:hover {
+    color: var(--accent-color);
+    border-color: rgba(255, 56, 199, 0.6);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+}
+
+@keyframes blink {
+  0% {
+    //color: var(--body-text);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    color: var(--accent-color);
+    opacity: 1;
+  }
+  84% {
+    color: var(--accent-color);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.btn {
   &.btn-switch {
     min-width: 44px;
     padding: .5rem .75rem;
@@ -73,17 +110,9 @@
     }
   }
 
-  &.btn-next {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    border-color: rgba(255, 56, 199, 0.45);
-    background: rgba(19, 5, 42, 0.6);
-    backdrop-filter: var(--back-f-blur);
-    transition:
-      transform 180ms ease,
-      box-shadow 180ms ease,
-      border-color 180ms ease;
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
 

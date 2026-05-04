@@ -1,10 +1,7 @@
 .btn-next {
-
-  &:hover,
-  &:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 0 18px rgba(255, 56, 199, 0.35);
-  }
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
 
   .next-icon {
     display: inline-block;

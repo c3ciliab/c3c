@@ -6,6 +6,11 @@
   --font-mono: "Oxygen Mono", monospace;
   --font-bubbler: "Bubbler One", sans-serif;
   --font-luckiest: "Luckiest Guy", cursive;
+  --font-pangolin: "Pangolin", cursive;
+  --font-play: "Play", sans-serif;
+  --font-englebert: "Englebert", cursive;
+  --font-shadows: "Shadows Into Light", cursive;
+  --font-shadowstwo: "Shadows Into Light Two", cursive;
 }
 
 /* FONTS */
@@ -50,6 +55,7 @@ $xxxl-txt: 80px;
 // Titles
 
 .brand {
+  line-height: 1;
   font-family: $luckiest;
   font-size: 192px;
   letter-spacing: 0.01em;

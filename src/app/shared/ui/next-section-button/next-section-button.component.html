@@ -1,9 +1,10 @@
-<button type="button" class="btn btn-next" [class.is-back-to-top]="isBackToTop" [attr.aria-label]="label()" (click)="next()">
+<button type="button" class="btn-next" [ngClass]="customClass" [class.is-back-to-top]="isBackToTop" [attr.aria-label]="label()" (click)="next()">
   <span>{{ label() }}</span>
-
+  <!-- btn icon -->
   @if (direction !== 'none') {
     <span class="next-icon" aria-hidden="true">{{ icon() }}</span>
   }
 </button>
 
+<!-- ps-pad cross btn -->
 <app-pspad-button shape="cross" (click)="next()" iconPath="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
