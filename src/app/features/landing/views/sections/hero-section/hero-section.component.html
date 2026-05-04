@@ -5,26 +5,20 @@
   <div class="content">
     <!-- <img src="assets/img/icons/logo.png" alt="logo c3c" width="80" /> -->
     <div class="hero">
+      <hr class="absolute">
+      <hr>
       <p class="brand">{{ title() }}</p>
       <h1 class="tagline">
         <span>{{ t('home.title.dev') }}</span>
         <span>{{ t('home.title.integration') }}</span>
         <span>{{ t('home.title.design') }}</span>
       </h1>
-    </div>
-
-    <div class="btn-group">
-      <button type="button" class="btn btn-cta" (click)="goTo('about')">
-        {{ t('home.cta.projects') }}
-      </button>
-
-      <button type="button" class="btn btn-cta secondary" (click)="goTo('about')">
-        {{ t('home.cta.contact') }}
-      </button>
+      <hr>
+      <hr class="absolute">
     </div>
   </div>
 
   <div class="next">
-    <app-next-section-button currentSectionId="home" labelKey="next.start" direction="none" />
+    <app-next-section-button currentSectionId="home" labelKey="next.start" direction="none" customClass="btn-start" />
   </div>
 </section>

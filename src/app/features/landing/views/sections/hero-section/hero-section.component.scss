@@ -15,9 +15,35 @@
 
 .hero {
   @extend %block;
-  //justify-content: center;
+  flex: 1;
+  justify-content: center;
+
+  .brand {
+    transform: translateY(-24px);
+  }
 
   .tagline {
     @extend %block;
+  }
+
+  hr {
+    &:first-of-type {
+      top: 50%;
+      width: 75%;
+    }
+
+    &:nth-of-type(2) {
+      height: 96px;
+      transform: translateY(-20px);
+    }
+
+    &:nth-of-type(3) {
+      height: 72px;
+    }
+
+    &:last-of-type {
+      left: 50%;
+      height: 32px;
+    }
   }
 }
