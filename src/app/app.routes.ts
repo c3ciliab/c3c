@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-//import { PortfolioShellPageComponent } from './features/landing/pages/portfolio-shell-page.component';
+//import { PortfolioShellPageComponent } from './features/landing/views/portfolio-shell-page.component';
 
 export const routes: Routes = [
   {
@@ -10,7 +10,7 @@ export const routes: Routes = [
   {
     path: ':lang',
     loadComponent: () =>
-      import('./features/landing/pages/portfolio-shell-page.component').then(
+      import('./features/landing/views/portfolio-shell-page.component').then(
         (m) => m.PortfolioShellPageComponent,
       ),
   },/*

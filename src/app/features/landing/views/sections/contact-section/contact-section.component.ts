@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { I18nService } from '../../../../core/services/i18n.service';
-import { SectionScrollService } from '../../../../core/services/section-scroll.service';
-import { SectionAnchorDirective } from '../../../../shared/directives/section-anchor.directive';
-import { NextSectionButtonComponent } from '../../../../shared/ui/next-section-button/next-section-button.component';
+import { I18nService } from '../../../../../core/services/i18n.service';
+import { SectionScrollService } from '../../../../../core/services/section-scroll.service';
+import { SectionAnchorDirective } from '../../../../../shared/directives/section-anchor.directive';
+import { NextSectionButtonComponent } from '../../../../../shared/ui/next-section-button/next-section-button.component';
 
 @Component({
   selector: 'app-contact-section',

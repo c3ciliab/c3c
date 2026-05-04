@@ -1,10 +1,10 @@
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { I18nService } from '../../../../core/services/i18n.service';
-import { ProjectsService } from '../../../../core/services/projects.service';
-import { SectionAnchorDirective } from '../../../../shared/directives/section-anchor.directive';
-import { NextSectionButtonComponent } from '../../../../shared/ui/next-section-button/next-section-button.component';
-import { ProjectCardComponent } from '../../../../shared/ui/project-card/project-card.component';
+import { I18nService } from '../../../../../core/services/i18n.service';
+import { ProjectsService } from '../../../../../core/services/projects.service';
+import { SectionAnchorDirective } from '../../../../../shared/directives/section-anchor.directive';
+import { NextSectionButtonComponent } from '../../../../../shared/ui/next-section-button/next-section-button.component';
+import { ProjectCardComponent } from '../../../../../shared/ui/project-card/project-card.component';
 
 @Component({
   selector: 'app-projects-section',

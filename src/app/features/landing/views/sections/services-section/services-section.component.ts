@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { I18nService } from '../../../../core/services/i18n.service';
-import { SERVICES_DATA } from '../../../../data/services.data';
-import { SectionAnchorDirective } from '../../../../shared/directives/section-anchor.directive';
-import { NextSectionButtonComponent } from '../../../../shared/ui/next-section-button/next-section-button.component';
-import { GlowCardComponent } from '../../../../shared/ui/glow-card/glow-card.component';
+import { I18nService } from '../../../../../core/services/i18n.service';
+import { SERVICES_DATA } from '../../../../../data/services.data';
+import { SectionAnchorDirective } from '../../../../../shared/directives/section-anchor.directive';
+import { NextSectionButtonComponent } from '../../../../../shared/ui/next-section-button/next-section-button.component';
+import { GlowCardComponent } from '../../../../../shared/ui/glow-card/glow-card.component';
 
 @Component({
   selector: 'app-services-section',
