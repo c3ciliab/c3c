@@ -109,9 +109,9 @@
   },
 
   "projects": {
-    "kicker": "Projects",
-    "title": "A selection of recent work",
-    "intro": "Projects combining integration, front-end, UX/UI, dashboards, applications and product structuring"
+    "kicker": "last projects",
+    "title": "a selection of recent work",
+    "intro": "combining integration, front-end, UX/UI, dashboards, applications and product structuring"
   },
 
   "journey": {

@@ -63,7 +63,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     deliverables: ['Écrans intégrés', 'Composants front-end'],
     stack: ['Angular', 'TypeScript', 'Foundation', 'Azure DevOps'],
     tags: ['CRM', 'Mobile', 'Front-End'],
-    featured: true,
+    featured: false,
     cover: 'assets/img/projects/project-naxos.png',
   },
   { id: 'hager-domovea',

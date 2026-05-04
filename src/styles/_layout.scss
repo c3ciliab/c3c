@@ -59,6 +59,13 @@
   .section-header {
     display: flex;
     position: relative;
+    left: var(--sp-7);
+    padding-top: var(--sp-7);
+
+    img {
+      position: absolute;
+      z-index: 2;
+    }
   }
 
   /* aside frame */
@@ -67,6 +74,7 @@
     align-self: center;
     gap: var(--sp-2);
     width: fit-content;
+    padding-block: var(--sp-1);
     border-block: var(--border);
     border-color: var(--body-text);
     backdrop-filter: var(--back-f-blur-sm);

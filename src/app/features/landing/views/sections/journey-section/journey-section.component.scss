@@ -1,16 +1,11 @@
 .section-header {
-  left: var(--sp-7);
-  padding-top: var(--sp-7);
-
   h4 {
     transform: rotate(-2deg);
   }
 
   img {
-    position: absolute;
     bottom: calc(-1 * var(--sp-5));
     left: var(--sp-3);
-    z-index: 2;
     width: 72px;
     transform: rotate(48deg);
   }

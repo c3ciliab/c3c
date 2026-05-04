@@ -1,14 +1,15 @@
 .section-header {
   position: absolute;
   top: var(--sp-7);
+  left: initial;
   z-index: 2;
+  padding-top: 0;
 
   h4 {
     transform: rotate(-4deg);
   }
 
   img {
-    position: absolute;
     top: var(--sp-5);
     right: calc(-1 * var(--sp-3));
     width: 60px;
@@ -43,7 +44,6 @@
   position: absolute;
   transform: translateY(60%);
   z-index: 2;
-  padding-bottom: var(--sp-1);
 
   h3 {
     span {
