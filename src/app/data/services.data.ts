@@ -5,25 +5,29 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'frontend',
     titleKey: 'services.frontend.title',
     textKey: 'services.frontend.text',
-    tags: ['Angular', 'TypeScript', 'SCSS'],
+    tags: ['angular', 'typescript', 'SCSS'],
+    icon: 'code',
   },
   {
     id: 'integration',
     titleKey: 'services.integration.title',
     textKey: 'services.integration.text',
-    tags: ['HTML', 'Responsive', 'Design system'],
+    tags: ['HTML', 'responsive', 'design system'],
+    icon: 'responsive',
   },
   {
     id: 'uxui',
     titleKey: 'services.uxui.title',
     textKey: 'services.uxui.text',
-    tags: ['Figma', 'Wireframes', 'Prototype'],
+    tags: ['figma', 'wireframes', 'prototype'],
+    icon: 'webdesign',
   },
   {
     id: 'systems',
     titleKey: 'services.systems.title',
     textKey: 'services.systems.text',
-    tags: ['Storybook', 'Documentation', 'Components'],
+    tags: ['storybook', 'documentation', 'components'],
+    icon: 'specs',
   },
 ];
 

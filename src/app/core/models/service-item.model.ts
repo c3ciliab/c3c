@@ -3,6 +3,7 @@ export interface ServiceItem {
   titleKey: string;
   textKey: string;
   tags: string[];
+  icon: string;
 }
 
 export interface SkillItem {

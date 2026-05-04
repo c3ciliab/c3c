@@ -51,7 +51,6 @@ $xxxl-txt: 80px;
 
 .brand {
   font-family: $luckiest;
-  line-height: 1;
   font-size: 192px;
   letter-spacing: 0.01em;
   text-shadow: var(--shadow-lg);
@@ -60,7 +59,6 @@ $xxxl-txt: 80px;
 // h1 => tagline
 .tagline {
   font-family: $amatic;
-  line-height: 1;
   font-size: $xxl-txt;
   text-shadow: var(--shadow-lg);
 
@@ -76,19 +74,20 @@ $xxxl-txt: 80px;
 }
 
 h2 {
-  font-size: $md-txt;
+  font-family: $bubbler;
+  font-size: $xl-txt;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h3, .h3 {
   font-family: $luckiest;
-  line-height: 1;
   font-size: $xl-txt;
   text-transform: uppercase;
 }
 
 h4 {
   font-family: $shadows;
-  line-height: 1;
   font-size: $xxlg-txt;
   font-weight: bold;
   text-transform: capitalize;
@@ -105,6 +104,10 @@ h5 {
 // Other texts
 label, .label, .tag, .subtitle {
   font-size: $sm-txt;
+}
+
+.tag {
+  font-family: $play;
 }
 
 .subtitle, .soft-txt {

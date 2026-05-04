@@ -2,27 +2,50 @@
 
   <div class="inner">
 
-    <header class="header">
-      <p class="section-kicker">{{ t('services.kicker') }}</p>
-      <h5>{{ t('services.title') }}</h5>
-      <p>{{ t('services.intro') }}</p>
+    <header class="section-header">
+      <img src="assets/img/icons/arrow-straight.png" alt="arrow" />
+      <h4>{{ t('services.kicker') }}</h4>
     </header>
 
-    <div class="services-grid">
-      @for (service of services; track service.id) {
-        <app-glow-card>
-          <article class="service-card">
-            <h2>{{ t(service.titleKey) }}</h2>
-            <p>{{ t(service.textKey) }}</p>
+    <aside class="prop">
+      <h3>
+        {{ t('services.title.segment-1') }}
+        <span>{{ t('services.title.segment-2') }}</span>
+        {{ t('services.title.segment-3') }}
+        <span>{{ t('services.title.segment-4') }}</span>
+      </h3>
+      <p class="h3">
+        <span>{{ t('services.intro.segment-1') }}</span>
+        <span>{{ t('services.intro.segment-2') }}</span>
+      </p>
+      <p class="h3">
+        <span>{{ t('services.intro.segment-3') }}</span>
+        <span>{{ t('services.intro.segment-4') }}</span>
+        <!-- <span>{{ t('services.intro.segment-4') }}</span> -->
+      </p>
+    </aside>
 
-            <ul class="tag-list">
-              @for (tag of service.tags; track tag) {
-                <li class="tag">{{ tag }}</li>
-              }
-            </ul>
-          </article>
-        </app-glow-card>
-      }
+    <div class="wrapper">
+      <div class="scene">
+        @for (service of services; track service.id) {
+          <app-glow-card>
+            <article class="service-card">
+              <header class="card-header">
+                <img src="assets/img/icons/{{ service.icon }}.png" alt="{{ service.icon }}" width="36" />
+                <h2>{{ t(service.titleKey) }}</h2>
+              </header>
+              <div class="card-body">
+                <p>{{ t(service.textKey) }}</p>
+                <ul class="tag-list">
+                  @for (tag of service.tags; track tag) {
+                    <li class="tag">{{ tag }}</li>
+                  }
+                </ul>
+              </div>
+            </article>
+          </app-glow-card>
+        }
+      </div>
     </div>
   </div>
 

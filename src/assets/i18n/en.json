@@ -74,9 +74,19 @@
   },
 
   "services": {
-    "kicker": "services",
-    "title": "cross-functional expertise, from structure to implementation",
-    "intro": "I support projects across the entire production chain, turning needs into concrete solutions from analysis and prototyping through implementation, product structuring, and the alignment of flows, components, and screens",
+    "kicker": "cross-functional expertise",
+    "title": {
+      "segment-1": "from",
+      "segment-2": "structure",
+      "segment-3": "to",
+      "segment-4": "implementation"
+    },
+    "intro": {
+      "segment-1": "I support yourprojects across the entire production chain",
+      "segment-2": "turning needs into concrete solutions",
+      "segment-3": "from analysis and prototyping through implementation, product structuring",
+      "segment-4": "and the alignment of flows, components, and screens"
+    },
     "frontend": {
       "title": "Front-end development",
       "text": "Modern, maintainable and coherent interfaces with strong attention to code quality and user experience"

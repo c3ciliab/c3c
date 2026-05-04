@@ -65,7 +65,7 @@
     align-items: center;
     justify-content: center;
     min-height: 48px;
-    background: linear-gradient(135deg, #7b2cff 0%, #ff38c7 55%, #23b7ff 100%);
+    background: linear-gradient(135deg, var(--info) 0%, var(--accent-color) 55%, var(--success-color) 100%);
 
     &.secondary {
       background: rgba(20, 10, 45, 0.62);

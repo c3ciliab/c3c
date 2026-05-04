@@ -3,11 +3,12 @@
 
 /* PLACEHOLDERS */
 
+//flex column
 %flexcol {
   display: flex;
   flex-direction: column;
 }
-
+//flex block
 %block {
   @extend %flexcol;
   align-items: center;
@@ -22,6 +23,12 @@
   @extend %blockcentered;
   width: 100%;
 }
+//grid block
+%row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
 
 /* BLOCKS */
 
@@ -30,14 +37,17 @@
   height: 100%;
 }
 
+/* SCREENS LAYOUT */
+
 .screen-section {
   @extend %fullcentered;
   position: relative;
   z-index: 1;
   min-height: 100dvh;
-  //padding: 4rem 6rem;
+  max-height: 100dvh;
   scroll-snap-align: start;
 
+  /* home content */
   .content {
     @extend %blockcentered;
     flex: 1;
@@ -45,47 +55,79 @@
     //height: 100svh;
   }
 
+  /* pages header */
+  .section-header {
+    display: flex;
+    position: relative;
+  }
+
+  /* aside frame */
+  .prop {
+    @extend %block;
+    align-self: center;
+    gap: var(--sp-2);
+    width: fit-content;
+    border-block: var(--border);
+    border-color: var(--body-text);
+    //backdrop-filter: blur(12px);
+    backdrop-filter: blur(4px);
+    text-shadow: var(--shadow-border-amethyst);
+
+    h3 {
+      font-size: 24px;
+
+      span {
+        font-size: 32px;
+        letter-spacing: var(--tr-tighter);
+        color: var(--accent-color);
+        text-shadow: var(--shadow-border-white);
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      letter-spacing: var(--tr-tiny);
+    }
+  }
+
+  /* page content */
   .inner {
     @extend %flexcol;
     flex: 1;
-    justify-content: center;
     gap: var(--sp-4);
+    max-height: 100%;
+    overflow: hidden;
     padding-inline: var(--sidebar); /* prevent content from being hidden behind sidebar */
     padding-bottom: var(--footer-btn); /* prevent content from being hidden behind next button */
   }
 
+  .wrapper {
+    display: flex;
+    flex: 1;
+    overflow-y: scroll;
+  }
+
+  .scene {
+    @extend %row;
+  }
+
+  /* next section btn */
   .next {
     position: absolute;
     left: 50%;
-    //bottom: 72px;
     bottom: 0;
     z-index: 10;
-    padding: 72px; /* space for cross button */
+    padding-bottom: 72px; /* space for cross button */
     transform: translateX(-50%);
   }
 }
 
 /* BLOCKS
-//router content
-.main {
-  padding: var(--sp-3);
-}
 .page-content {
   @extend %flexcol;
   gap: 2rem;
-}
-.scene {
-  display: flex;
-  gap: 1rem;
-}
-.container {
   width: min(1200px, calc(100% - 2rem));
   margin-inline: auto;
-}
-//grid
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
 }
 */

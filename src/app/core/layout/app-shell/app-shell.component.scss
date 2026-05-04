@@ -1,8 +1,6 @@
 .app-shell {
   display: flex;
   min-height: 100svh;
-  //background: var(--bg-900);
-  //color: var(--text-main);
 }
 
 .shell-side {
@@ -26,6 +24,7 @@
   }
 }
 
+//router content
 .shell-main {
   position: relative;
   flex: 1 1 auto;
@@ -48,72 +47,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 20;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(255, 56, 199, 0.45);
-    border-radius: var(--radius-full);
-    transition:
-      transform 180ms ease,
-      box-shadow 180ms ease,
-      border-color 180ms ease;
-
-    svg {
-      width: 32px;
-      height: 32px;
-      fill: var(--accent-color);
-      opacity: 0.48;
-      transition: var(--tr);
-    }
-
-    &.triangle, &.cross {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    &.circle, &.square {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    &.triangle {
-      align-items: initial;
-      top: 20px;
-      padding-top: 2.4px;
-    }
-
-    &.circle {
-      right: 20px;
-    }
-
-    &.cross {
-      bottom: 20px;
-    }
-
-    &.square {
-      left: 20px;
-
-      svg {
-        width: 28px;
-        height: 28px;
-      }
-    }
-
-    &:hover {
-      //transform: translateY(-2px);
-      box-shadow: 0 0 18px rgba(255, 56, 199, 0.35);
-
-      svg {
-        opacity: 0.8;
-      }
-    }
-  }
 }
 
 @media (max-width: 900px) {

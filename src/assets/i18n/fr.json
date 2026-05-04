@@ -74,24 +74,34 @@
   },
 
   "services": {
-    "kicker": "prestations",
-    "title": "une expertise transverse, du cadrage à l’intégration",
-    "intro": "j’accompagne les projets sur toute la chaîne de production et transforme les besoins en solutions concrètes, de l’analyse au prototype jusqu’à l’intégration, la structuration du produit, et la mise en cohérence des parcours, des composants et des écrans",
+    "kicker": "expertise transverse",
+    "title": {
+      "segment-1": "du",
+      "segment-2": "cadrage",
+      "segment-3": "à",
+      "segment-4": "l’intégration"
+    },
+    "intro": {
+      "segment-1": "j’accompagne vos projets sur toute la chaîne de production",
+      "segment-2": "et transforme les besoins en solutions concrètes",
+      "segment-3": "de l’analyse au prototype jusqu’à l’intégration, la structuration du produit",
+      "segment-4": "et la mise en cohérence des parcours, des composants et des écrans"
+    },
     "frontend": {
-      "title": "Développement front-end",
-      "text": "Développement d’interfaces modernes, maintenables et cohérentes, avec une attention forte à la qualité du code et à l’expérience utilisateur"
+      "title": "développement front-end",
+      "text": "développement d’interfaces modernes, maintenables et cohérentes, avec une attention forte à la qualité du code et à l’expérience utilisateur"
     },
     "integration": {
-      "title": "Intégration web",
-      "text": "Intégration fidèle aux maquettes, responsive, robuste et pensée pour la production réelle"
+      "title": "intégration web",
+      "text": "intégration fidèle aux maquettes, responsive, robuste et pensée pour la production réelle"
     },
     "uxui": {
       "title": "UX/UI design",
-      "text": "Wireframes, maquettes, prototypes, hiérarchie visuelle et cohérence d’interface au service d’usages concrets"
+      "text": "wireframes, maquettes, prototypes, hiérarchie visuelle et cohérence d’interface au service d’usages concrets"
     },
     "systems": {
-      "title": "Design systems",
-      "text": "Structuration de composants, règles UI et documentation pour fiabiliser les projets et faciliter les évolutions"
+      "title": "design systems",
+      "text": "structuration de composants, règles UI et documentation pour fiabiliser les projets et faciliter les évolutions"
     }
   },
 
