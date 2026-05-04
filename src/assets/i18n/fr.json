@@ -5,7 +5,10 @@
     "services": "prestations",
     "portfolio": "portfolio",
     "journey": "parcours",
-    "contact": "contact"
+    "contact": "contact",
+    "backPortfolio": "retour portfolio",
+    "backJourney": "retour parcours",
+    "otherUniverse": "another universe"
   },
 
   "common": {
@@ -121,5 +124,12 @@
     "kicker": "Contact",
     "title": "Parlons de votre projet",
     "intro": "Mission freelance, renfort front-end, cadrage UX/UI, prototype ou design system : je peux vous accompagner sur des besoins variés"
+  },
+
+  "anotherUniverse": {
+    "kicker": "Hors parcours",
+    "title": "Another Universe",
+    "intro": "Une page à part, dans le même univers visuel, mais en dehors du scroll principal du portfolio.",
+    "back": "retour au portfolio"
   }
 }

@@ -1,12 +1,31 @@
 <nav class="left-nav" aria-label="Section navigation">
-  <ul>
-    @for (item of items; track item.id) {
-      <li>
-        <button type="button" class="nav-link" [class.is-active]="activeId() === item.id" (click)="goTo(item.id)">
-          <span class="nav-dot"></span>
-          <span class="nav-label">{{ label(item.labelKey) }}</span>
-        </button>
-      </li>
-    }
-  </ul>
+  @if (navMode() === 'portfolio') {
+    <ul class="left-nav__list">
+      @for (item of items; track item.id) {
+        <li>
+          <button type="button" class="nav-link" [class.is-active]="activeId() === item.id" (click)="goTo(item.id)">
+            <span class="nav-dot"></span>
+            <span class="nav-label">{{ label(item.labelKey) }}</span>
+          </button>
+        </li>
+      }
+    </ul>
+  }
+
+  @if (navMode() === 'standalone') {
+    <ul class="left-nav__standalone">
+      <a class="nav-link nav-link--back" [routerLink]="['/', currentLang()]">
+        <span class="nav-dot"></span>
+        <span class="nav-label">{{ label('nav.backPortfolio') }}</span>
+      </a>
+      <a class="nav-link nav-link--back" [class.is-active]="standaloneActiveKey() === 'journey'" [routerLink]="['/', currentLang()]" fragment="journey">
+        <span class="nav-dot"></span>
+        <span class="nav-label">{{ label('nav.backJourney') }}</span>
+      </a>
+
+      <div class="nav-divider"></div>
+
+      <p class="nav-link nav-context" [class.is-active]="standaloneActiveKey() === 'another-universe'">{{ label('nav.otherUniverse') }}</p>
+    </ul>
+  }
 </nav>

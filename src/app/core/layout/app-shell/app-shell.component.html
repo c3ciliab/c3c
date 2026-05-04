@@ -1,20 +1,15 @@
-<div class="app-shell">
-
+<div class="app-shell" [ngClass]="mode">
   <aside class="shell-side s-left">
     <app-left-side-nav />
     <!-- <app-language-switcher /> -->
+    @if (showLanguageSwitcher) {
+      <app-language-switcher />
+    }
   </aside>
 
   <main class="shell-main">
-
-    <div class="background-scene"></div>
-
-    <app-hero-section />
-    <app-about-section />
-    <app-services-section />
-    <app-projects-section />
-    <app-journey-section />
-    <app-contact-section />
+    <div class="background-scene" aria-hidden="true"></div>
+    <ng-content></ng-content>
   </main>
 
   <aside class="shell-side s-right">

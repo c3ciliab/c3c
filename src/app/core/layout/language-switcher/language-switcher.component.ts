@@ -18,9 +18,19 @@ export class LanguageSwitcherComponent {
 
   async switchTo(lang: AppLang): Promise<void> {
     const currentFragment = window.location.hash.replace('#', '');
+    const url = this.router.url.split('#')[0];
+    const segments = url.split('/').filter(Boolean);
+
+    const currentRouteLang = segments[0];
+    const restOfPath =
+      currentRouteLang === 'fr' || currentRouteLang === 'en'
+        ? segments.slice(1)
+        : segments;
+
     await this.i18n.setLang(lang);
-    await this.router.navigate(['/', lang], {
-      fragment: currentFragment || 'home',
+
+    await this.router.navigate(['/', lang, ...restOfPath], {
+      fragment: currentFragment || undefined,
     });
   }
 }

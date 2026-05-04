@@ -5,7 +5,10 @@
     "services": "services",
     "portfolio": "portfolio",
     "journey": "journey",
-    "contact": "contact"
+    "contact": "contact",
+    "backPortfolio": "back to portfolio",
+    "backJourney": "back to journey",
+    "otherUniverse": "another universe"
   },
 
   "common": {
@@ -121,5 +124,12 @@
     "kicker": "Contact",
     "title": "Let’s talk about your project",
     "intro": "Freelance mission, front-end reinforcement, UX/UI framing, prototype or design system: I can support a wide range of needs"
+  },
+
+  "anotherUniverse": {
+    "kicker": "Outside the main flow",
+    "title": "Another Universe",
+    "intro": "A standalone page within the same visual universe, but outside the main portfolio scroll.",
+    "back": "back to portfolio"
   }
 }

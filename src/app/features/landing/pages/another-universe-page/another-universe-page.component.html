@@ -1,0 +1,21 @@
+@if (ready()) {
+  <app-shell mode="standalone">
+    <section class="screen-section standalone-page">
+      <div class="inner glass-panel">
+        <div class="wrapper">
+          <div class="scene">
+            <audio controls src="assets/sound/SRAM_music-AmstradCPC.mp3" [autoplay]="false"></audio>
+            <p class="section-kicker">{{ t('anotherUniverse.kicker') }}</p>
+            <h1>{{ t('anotherUniverse.title') }}</h1>
+            <p>{{ t('anotherUniverse.intro') }}</p>
+            <div class="standalone-page__actions">
+              <a class="btn btn-main" [routerLink]="['/', currentLang()]">
+                {{ t('anotherUniverse.back') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </app-shell>
+}
