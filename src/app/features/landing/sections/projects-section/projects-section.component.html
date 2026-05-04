@@ -1,16 +1,23 @@
-<section id="portfolio" class="screen-section projects-section" data-section appSectionAnchor sectionId="portfolio">
+<section id="portfolio" class="screen-section" data-section appSectionAnchor sectionId="portfolio">
 
   <div class="inner">
-    <header class="header">
-      <p class="section-kicker">{{ t('projects.kicker') }}</p>
-      <h5>{{ t('projects.title') }}</h5>
-      <p>{{ t('projects.intro') }}</p>
+
+    <header class="section-header">
+      <img src="assets/img/icons/arrow-straight.png" alt="arrow" />
+      <h4>{{ t('projects.kicker') }}</h4>
     </header>
 
-    <div class="projects-grid">
-      @for (project of projects(); track project.id) {
-        <app-project-card [project]="project" [lang]="lang()" />
-      }
+    <aside class="prop">
+      <h5>{{ t('projects.title') }}</h5>
+      <p>{{ t('projects.intro') }}</p>
+    </aside>
+
+    <div class="wrapper">
+      <div class="scene">
+        @for (project of projects(); track project.id) {
+          <app-project-card [project]="project" [lang]="lang()" />
+        }
+      </div>
     </div>
   </div>
 

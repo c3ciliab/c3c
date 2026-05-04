@@ -1,54 +1,48 @@
-.journey-section {
-  &__inner {
-    width: min(1100px, 100%);
-    margin-inline: auto;
+.section-header {
+  left: var(--sp-7);
+  padding-top: var(--sp-7);
+
+  h4 {
+    transform: rotate(-2deg);
   }
 
-  &__header {
-    max-width: 70ch;
-    margin-bottom: 2rem;
-  }
-
-  &__next {
+  img {
     position: absolute;
-    left: 50%;
-    bottom: 2rem;
-    transform: translateX(-50%);
+    bottom: calc(-1 * var(--sp-5));
+    left: var(--sp-3);
+    z-index: 2;
+    width: 72px;
+    transform: rotate(48deg);
   }
 }
 
-.journey-list {
+.scene {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-3);
 }
 
 .journey-item {
-  padding: 1.25rem;
+  padding: 1rem;
 
-  &__period {
-    margin: 0 0 0.5rem;
+  .item-period {
     color: var(--accent);
-    font-size: 0.95rem;
   }
 
-  &__company {
+  .item-company {
     color: var(--txt-soft);
-    margin-top: 0;
   }
 
   ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 0;
-  }
 
-  li {
-    padding: 0.35rem 0.65rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.07);
-    font-size: 0.85rem;
+    li {
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      font-size: 0.85rem;
+    }
   }
 }
