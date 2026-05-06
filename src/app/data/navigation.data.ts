@@ -7,9 +7,9 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'portfolio', labelKey: 'nav.portfolio', order: 4,
     children: [
       {
-        id: 'portfolio-full',
+        id: 'full-portfolio',
         labelKey: 'nav.portfolioFull',
-        route: 'portfolio-full',
+        route: 'full-portfolio',
       },
     ],
    },

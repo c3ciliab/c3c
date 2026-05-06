@@ -36,13 +36,13 @@
   @if (navMode() === 'standalone') {
     <ul class="nav-standalone">
       <li class="nav-item">
-        <a class="nav-link nav-link--back" [routerLink]="['/', currentLang()]">
+        <a class="nav-link" [routerLink]="['/', currentLang()]">
           <span class="nav-dot"></span>
           <span class="nav-label">{{ label('nav.backPortfolio') }}</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link nav-link--back" [class.is-active]="standaloneActiveKey() === 'journey'" [routerLink]="['/', currentLang()]" fragment="journey">
+        <a class="nav-link" [class.is-active]="standaloneActiveKey() === 'journey'" [routerLink]="['/', currentLang()]" fragment="journey">
           <span class="nav-dot"></span>
           <span class="nav-label">{{ label('nav.backJourney') }}</span>
         </a>

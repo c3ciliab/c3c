@@ -15,7 +15,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: ':lang/portfolio-full',
+    path: ':lang/full-portfolio',
     loadComponent: () =>
       import('./features/landing/pages/portfolio-full-page/portfolio-full-page.component').then(
         (m) => m.PortfolioFullPageComponent,
@@ -29,9 +29,9 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'portfolio-full',
+    path: 'full-portfolio',
     pathMatch: 'full',
-    redirectTo: 'fr/portfolio-full',
+    redirectTo: 'fr/full-portfolio',
   },
   {
     path: 'another-universe',

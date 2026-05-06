@@ -59,7 +59,7 @@ export class LeftSideNavComponent {
 
     return (
       itemId === 'portfolio' &&
-      this.secondaryPage() === 'portfolio-full'
+      this.secondaryPage() === 'full-portfolio'
     );
   }
 
