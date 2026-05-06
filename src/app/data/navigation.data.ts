@@ -4,7 +4,15 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'home', labelKey: 'nav.home', order: 1 },
   { id: 'about', labelKey: 'nav.about', order: 2 },
   { id: 'services', labelKey: 'nav.services', order: 3 },
-  { id: 'portfolio', labelKey: 'nav.portfolio', order: 4 },
+  { id: 'portfolio', labelKey: 'nav.portfolio', order: 4,
+    children: [
+      {
+        id: 'portfolio-full',
+        labelKey: 'nav.portfolioFull',
+        route: 'portfolio-full',
+      },
+    ],
+   },
   { id: 'journey', labelKey: 'nav.journey', order: 5 },
   { id: 'contact', labelKey: 'nav.contact', order: 6 },
 ];

@@ -5,6 +5,10 @@
     <header class="section-header">
       <img src="assets/img/icons/arrow-straight.png" alt="arrow" />
       <h4>{{ t('projects.kicker') }}</h4>
+      <button class="h5" [routerLink]="['/', currentLang(), 'portfolio-full']">
+        <span class="nav-label">{{ label('nav.portfolioFull') }}</span>
+        <span>→</span>
+      </button>
     </header>
 
     <aside class="prop">

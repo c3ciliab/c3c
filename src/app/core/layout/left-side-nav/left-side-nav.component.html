@@ -1,31 +1,58 @@
 <nav class="left-nav" aria-label="Section navigation">
+
   @if (navMode() === 'portfolio') {
-    <ul class="left-nav__list">
+    <ul class="nav-list">
       @for (item of items; track item.id) {
-        <li>
-          <button type="button" class="nav-link" [class.is-active]="activeId() === item.id" (click)="goTo(item.id)">
-            <span class="nav-dot"></span>
-            <span class="nav-label">{{ label(item.labelKey) }}</span>
-          </button>
+        <li class="nav-item">
+          @if (!item.children?.length) {
+            <button type="button" class="nav-link" [class.is-active]="isParentActive(item.id)" (click)="goTo(item.id)">
+              <span class="nav-dot"></span>
+              <span class="nav-label">{{ label(item.labelKey) }}</span>
+            </button>
+          } @else {
+            <div class="nav-group" [class.is-active]="isParentActive(item.id)">
+              <button type="button" class="nav-link" [class.is-active]="isParentActive(item.id)" (click)="goTo(item.id)">
+                <span class="nav-dot"></span>
+                <span class="nav-label">{{ label(item.labelKey) }}</span>
+              </button>
+
+              <ul class="nav-children">
+                @for (child of item.children; track child.id) {
+                  <li>
+                    <a class="nav-link" [class.is-active]="isChildActive(child.id)" [routerLink]="['/', currentLang(), child.route]">
+                      <span class="nav-dot"></span>
+                      <span class="nav-label">{{ label(child.labelKey) }}</span>
+                    </a>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
         </li>
       }
     </ul>
   }
 
   @if (navMode() === 'standalone') {
-    <ul class="left-nav__standalone">
-      <a class="nav-link nav-link--back" [routerLink]="['/', currentLang()]">
-        <span class="nav-dot"></span>
-        <span class="nav-label">{{ label('nav.backPortfolio') }}</span>
-      </a>
-      <a class="nav-link nav-link--back" [class.is-active]="standaloneActiveKey() === 'journey'" [routerLink]="['/', currentLang()]" fragment="journey">
-        <span class="nav-dot"></span>
-        <span class="nav-label">{{ label('nav.backJourney') }}</span>
-      </a>
+    <ul class="nav-standalone">
+      <li class="nav-item">
+        <a class="nav-link nav-link--back" [routerLink]="['/', currentLang()]">
+          <span class="nav-dot"></span>
+          <span class="nav-label">{{ label('nav.backPortfolio') }}</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-link--back" [class.is-active]="standaloneActiveKey() === 'journey'" [routerLink]="['/', currentLang()]" fragment="journey">
+          <span class="nav-dot"></span>
+          <span class="nav-label">{{ label('nav.backJourney') }}</span>
+        </a>
+      </li>
 
       <div class="nav-divider"></div>
 
-      <p class="nav-link nav-context" [class.is-active]="standaloneActiveKey() === 'another-universe'">{{ label('nav.otherUniverse') }}</p>
+      <li class="nav-item">
+        <p class="nav-link nav-context" [class.is-active]="standaloneActiveKey() === 'another-universe'">{{ label('nav.otherUniverse') }}</p>
+      </li>
     </ul>
   }
 </nav>

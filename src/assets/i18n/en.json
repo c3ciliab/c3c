@@ -6,9 +6,10 @@
     "portfolio": "portfolio",
     "journey": "journey",
     "contact": "contact",
-    "backPortfolio": "back to portfolio",
+    "backPortfolio": "back to home",
     "backJourney": "back to journey",
-    "otherUniverse": "another universe"
+    "otherUniverse": "another universe",
+    "portfolioFull": "more projects"
   },
 
   "common": {

@@ -6,9 +6,10 @@
     "portfolio": "portfolio",
     "journey": "parcours",
     "contact": "contact",
-    "backPortfolio": "retour portfolio",
+    "backPortfolio": "retour home",
     "backJourney": "retour parcours",
-    "otherUniverse": "another universe"
+    "otherUniverse": "another universe",
+    "portfolioFull": "+ de projets"
   },
 
   "common": {
@@ -110,7 +111,7 @@
 
   "projects": {
     "kicker": "derniers projets",
-    "title": "quelques missions et réalisations récentes",
+    "title": "missions et réalisations récentes",
     "intro": "où se croisent intégration, front-end, UX/UI, dashboards, applications et structuration produit"
   },
 

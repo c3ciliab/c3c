@@ -1,5 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { RouterLink, ActivatedRoute } from '@angular/router';
+import { NAV_ITEMS } from '../../../../../data/navigation.data';
 import { I18nService } from '../../../../../core/services/i18n.service';
 import { ProjectsService } from '../../../../../core/services/projects.service';
 import { SectionAnchorDirective } from '../../../../../shared/directives/section-anchor.directive';
@@ -9,14 +10,17 @@ import { ProjectCardComponent } from '../../../../../shared/ui/project-card/proj
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [SectionAnchorDirective, NextSectionButtonComponent, ProjectCardComponent],
+  imports: [RouterLink, SectionAnchorDirective, NextSectionButtonComponent, ProjectCardComponent],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss',
 })
 export class ProjectsSectionComponent {
   private readonly i18n = inject(I18nService);
+  readonly currentLang = computed(() => this.i18n.lang());
   private readonly projectsService = inject(ProjectsService);
   private readonly route = inject(ActivatedRoute);
+
+  readonly items = NAV_ITEMS;
 
   readonly lang = computed(() => {
     const routeLang = this.route.snapshot.paramMap.get('lang');
@@ -26,6 +30,10 @@ export class ProjectsSectionComponent {
   readonly projects = this.projectsService.featuredProjects;
 
   t(key: string): string {
+    return this.i18n.t(key);
+  }
+
+  label(key: string): string {
     return this.i18n.t(key);
   }
 }

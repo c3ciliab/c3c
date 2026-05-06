@@ -15,11 +15,23 @@ export const routes: Routes = [
       ),
   },
   {
+    path: ':lang/portfolio-full',
+    loadComponent: () =>
+      import('./features/landing/pages/portfolio-full-page/portfolio-full-page.component').then(
+        (m) => m.PortfolioFullPageComponent,
+      ),
+  },
+  {
     path: ':lang/another-universe',
     loadComponent: () =>
       import('./features/landing/pages/another-universe-page/another-universe-page.component').then(
         (m) => m.AnotherUniversePageComponent,
       ),
+  },
+  {
+    path: 'portfolio-full',
+    pathMatch: 'full',
+    redirectTo: 'fr/portfolio-full',
   },
   {
     path: 'another-universe',

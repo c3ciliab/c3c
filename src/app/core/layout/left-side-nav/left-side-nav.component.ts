@@ -51,4 +51,19 @@ export class LeftSideNavComponent {
     this.sectionScroll.scrollToSection(sectionId);
     //history.replaceState(null, '', `${window.location.pathname}#${sectionId}`);
   }
+
+  isParentActive(itemId: string): boolean {
+    if (this.navMode() === 'portfolio') {
+      return this.activeId() === itemId;
+    }
+
+    return (
+      itemId === 'portfolio' &&
+      this.secondaryPage() === 'portfolio-full'
+    );
+  }
+
+  isChildActive(childId: string): boolean {
+    return this.secondaryPage() === childId;
+  }
 }

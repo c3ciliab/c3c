@@ -86,7 +86,8 @@ h2 {
   text-transform: uppercase;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-family: $luckiest;
   font-size: $xl-txt;
   text-transform: uppercase;
@@ -100,7 +101,8 @@ h4 {
   font-variant-caps: small-caps;
 }
 
-h5 {
+h5,
+.h5 {
   font-family: $bubbler;
   font-size: $md-txt;
   font-weight: 700;

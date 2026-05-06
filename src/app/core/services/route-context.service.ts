@@ -4,7 +4,13 @@ import { filter } from 'rxjs/operators';
 
 export type AppLang = 'fr' | 'en';
 export type RouteMode = 'portfolio' | 'standalone';
-export type SecondaryPage = 'another-universe' | null;
+
+export enum SecondaryPage {
+  AnotherUniverse = 'another-universe',
+  PortfolioFull = 'portfolio-full',
+  ProjectDetail = 'project-detail',
+  Cv = 'cv',
+}
 
 @Injectable({ providedIn: 'root' })
 export class RouteContextService {
@@ -13,13 +19,19 @@ export class RouteContextService {
 
   private readonly langSignal = signal<AppLang>('fr');
   private readonly modeSignal = signal<RouteMode>('portfolio');
-  private readonly secondaryPageSignal = signal<SecondaryPage>(null);
   private readonly fragmentSignal = signal<string | null>(null);
+  private readonly secondaryPageSignal = signal<SecondaryPage | null>(null);
 
   readonly currentLang = computed(() => this.langSignal());
   readonly mode = computed(() => this.modeSignal());
   readonly secondaryPage = computed(() => this.secondaryPageSignal());
   readonly currentFragment = computed(() => this.fragmentSignal());
+
+  readonly isPortfolio = computed(() => this.modeSignal() === 'portfolio');
+  readonly isStandalone = computed(() => this.modeSignal() === 'standalone');
+  readonly isProjectDetail = computed(
+    () => this.secondaryPageSignal() === SecondaryPage.ProjectDetail,
+  );
 
   constructor() {
     this.updateFromUrl(this.router.url);
@@ -41,11 +53,20 @@ export class RouteContextService {
     const childPath = segments[1] ?? null;
 
     let mode: RouteMode = 'portfolio';
-    let secondaryPage: SecondaryPage = null;
+    let secondaryPage: SecondaryPage | null = null;
 
     if (childPath === 'another-universe') {
       mode = 'standalone';
-      secondaryPage = 'another-universe';
+      secondaryPage = SecondaryPage.AnotherUniverse;
+    } else if (childPath === 'portfolio-full') {
+      mode = 'standalone';
+      secondaryPage = SecondaryPage.PortfolioFull;
+    } else if (childPath === 'project') {
+      mode = 'standalone';
+      secondaryPage = SecondaryPage.ProjectDetail;
+    } else if (childPath === 'cv') {
+      mode = 'standalone';
+      secondaryPage = SecondaryPage.Cv;
     }
 
     this.langSignal.set(lang);
