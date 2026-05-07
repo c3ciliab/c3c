@@ -38,6 +38,12 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/', currentLang()]">
           <span class="nav-dot"></span>
+          <span class="nav-label">{{ label('nav.backHome') }}</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.is-active]="standaloneActiveKey() === 'portfolio'" [routerLink]="['/', currentLang()]" fragment="portfolio">
+          <span class="nav-dot"></span>
           <span class="nav-label">{{ label('nav.backPortfolio') }}</span>
         </a>
       </li>

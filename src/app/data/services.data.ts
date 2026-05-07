@@ -26,7 +26,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: 'systems',
     titleKey: 'services.systems.title',
     textKey: 'services.systems.text',
-    tags: ['storybook', 'documentation', 'components'],
+    tags: ['storybook', 'documentation', 'print'],
     icon: 'specs',
   },
 ];

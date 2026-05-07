@@ -63,21 +63,8 @@
   background: url('/assets/img/bg/bg-home.png') center / cover no-repeat;
 }
 
-//ps nav
-.ps-pad {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 @media (max-width: 900px) {
   .shell-side {
     width: auto;
-    padding: 0.75rem 1rem;
-    flex-direction: row;
-    align-items: center;
-    background: rgba(10, 3, 24, 0.78);
-    backdrop-filter: var(--back-f-blur);
   }
 }

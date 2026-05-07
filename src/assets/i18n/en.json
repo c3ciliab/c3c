@@ -6,7 +6,8 @@
     "portfolio": "portfolio",
     "journey": "journey",
     "contact": "contact",
-    "backPortfolio": "back to home",
+    "backHome": "back to home",
+    "backPortfolio": "back to portfolio",
     "backJourney": "back to journey",
     "otherUniverse": "another universe",
     "portfolioFull": "more projects"

@@ -11,6 +11,11 @@
   }
 }
 
+.prop {
+  padding-inline: var(--sp-2);
+  background-color: var(--accent-color);
+}
+
 .scene {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

@@ -1,6 +1,7 @@
 export interface ProjectItem {
   id: string;
   slug: string;
+  type: string;
   title: string;
   subtitle?: string;
   category?: string;
@@ -8,7 +9,8 @@ export interface ProjectItem {
   sector: string;
   period: string;
   year?: string;
-  role: string[];
+  role: string;
+  tasks: string[];
   summary: string;
   excerpt?: string;
   problem: string;

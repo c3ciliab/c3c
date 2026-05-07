@@ -1,20 +1,23 @@
-<article class="project-card glass-panel">
-
+<article class="project-card">
   <a class="card-link" [routerLink]="['/', lang, 'project', project.slug]">
+    <div class="card-panel">
+      <h2>{{ project.type }}</h2>
+    </div>
     <img [src]="project.cover" [alt]="project.title" />
+    <p class="card-summary">{{ project.summary }}</p>
   </a>
 
   <div class="card-content">
-    <!-- <p class="card-meta">{{ project.client }} · {{ project.period }}</p> -->
     <header class="card-header">
+      <!-- <p class="card-meta">{{ project.client }} · {{ project.period }}</p> -->
       <p class="card-meta">{{ project.client }}</p>
-      <h5>
-        <a [routerLink]="['/', lang, 'project', project.slug]">{{ project.title }}</a>
-        <span>{{ project.subtitle }}</span>
-      </h5>
+      <a [routerLink]="['/', lang, 'project', project.slug]">
+        <h5>
+          {{ project.title }}
+          <span>{{ project.subtitle }}</span>
+        </h5>
+      </a>
     </header>
-
-    <p class="card-summary">{{ project.summary }}</p>
 
     <ul class="card-tags">
       @for (tag of project.tags; track tag) {
@@ -22,5 +25,4 @@
       }
     </ul>
   </div>
-
 </article>

@@ -22,7 +22,7 @@ export class AppShellComponent {
   @Input() mode: 'portfolio' | 'standalone' = 'portfolio';
   @Input() showLanguageSwitcher = false;
 
-  readonly isMenuOpen = signal(false);
+  readonly isMenuOpen = signal(true);
 
   toggleMenu(): void {
     this.isMenuOpen.update((value) => !value);

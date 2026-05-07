@@ -74,10 +74,8 @@
     align-self: center;
     gap: var(--sp-2);
     width: fit-content;
-    padding-block: var(--sp-1);
-    border-block: var(--border);
-    border-color: var(--body-text);
-    backdrop-filter: var(--back-f-blur-sm);
+    padding: var(--sp-1);
+    border-block: 1px solid var(--body-text);
     text-shadow: var(--shadow-border-amethyst);
 
     h3 {
