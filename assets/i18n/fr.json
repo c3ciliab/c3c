@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "home",
+    "about": "about c3c",
+    "services": "prestations",
+    "portfolio": "portfolio",
+    "journey": "parcours",
+    "contact": "contact",
+    "backHome": "retour home",
+    "backPortfolio": "retour portfolio",
+    "backJourney": "retour parcours",
+    "otherUniverse": "another universe",
+    "portfolioFull": "+ de projets"
+  },
+
+  "common": {
+    "next": "suite"
+  },
+
+  "next": {
+    "start": "press start",
+    "services": "prestations",
+    "portfolio": "portfolio",
+    "journey": "parcours",
+    "contact": "contact",
+    "home": "back to top"
+  },
+
+  "home": {
+    "title": {
+      "dev": "développeuse front",
+      "integration": "intégratrice web",
+      "design": "UX/UI designer"
+    },
+    "cta": {
+      "projects": "voir mes projets",
+      "contact": "me contacter"
+    }
+  },
+
+  "about": {
+    "kicker": "profil hybride",
+    "title": {
+      "segment-1": "du",
+      "segment-2": "design",
+      "segment-3": "au",
+      "segment-4": "développement"
+    },
+    "subtitle-1": {
+      "segment-1": "je conçois des",
+      "segment-2": "expériences web",
+      "segment-3": "et applicatives"
+    },
+    "subtitle-2": {
+      "segment-1": "claires",
+      "segment-2": "cohérentes",
+      "segment-3": "et",
+      "segment-4": "production ready"
+    },
+    "skill": {
+      "flex": {
+        "title": "polyvalence",
+        "text": ["vision transverse", "expériences complémentaires", "solutions sur mesure"]
+      },
+      "xp": {
+        "title": "expérience",
+        "text": ["6 ans en entreprise", "freelance depuis 2011"]
+      },
+      "discipline": {
+        "title": "rigueur",
+        "text": ["specs & process", "pixel perfect", "standards web"]
+      },
+      "passion": {
+        "title": "passion",
+        "text": ["autodidacte", "veille continue", "curiosité technologique"]
+      }
+    },
+    "intro": "front-end, intégration, UX/UI, design system,"
+  },
+
+  "services": {
+    "kicker": "expertise transverse",
+    "title": {
+      "segment-1": "du",
+      "segment-2": "cadrage",
+      "segment-3": "à",
+      "segment-4": "l’intégration"
+    },
+    "intro": {
+      "segment-1": "j’accompagne vos projets sur toute la chaîne de production",
+      "segment-2": "et transforme les besoins en solutions concrètes",
+      "segment-3": "de l’analyse au prototype jusqu’à l’intégration, la structuration du produit",
+      "segment-4": "et la mise en cohérence des parcours, des composants et des écrans"
+    },
+    "frontend": {
+      "title": "développement front-end",
+      "text": "développement d’interfaces modernes, maintenables et cohérentes, avec une attention forte à la qualité du code et à l’expérience utilisateur"
+    },
+    "integration": {
+      "title": "intégration web",
+      "text": "intégration fidèle aux maquettes, responsive, robuste et pensée pour la production réelle"
+    },
+    "uxui": {
+      "title": "UX/UI design",
+      "text": "wireframes, maquettes, prototypes, hiérarchie visuelle et cohérence d’interface au service d’usages concrets"
+    },
+    "systems": {
+      "title": "design systems",
+      "text": "structuration de composants, règles UI et documentation pour fiabiliser les projets et faciliter les évolutions"
+    }
+  },
+
+  "projects": {
+    "kicker": "derniers projets",
+    "title": "missions et réalisations récentes",
+    "intro": "où se croisent intégration, front-end, UX/UI, dashboards, applications et structuration produit"
+  },
+
+  "journey": {
+    "kicker": "Parcours",
+    "title": "Un parcours construit entre design, intégration et front-end",
+    "intro": "Une trajectoire qui m’a permis de construire un profil hybride, capable de passer du cadrage à la production"
+  },
+
+  "contact": {
+    "kicker": "Contact",
+    "title": "Parlons de votre projet",
+    "intro": "Mission freelance, renfort front-end, cadrage UX/UI, prototype ou design system : je peux vous accompagner sur des besoins variés"
+  },
+
+  "anotherUniverse": {
+    "kicker": "Hors parcours",
+    "title": "Another Universe",
+    "intro": "Une page à part, dans le même univers visuel, mais en dehors du scroll principal du portfolio.",
+    "back": "retour au portfolio"
+  }
+}

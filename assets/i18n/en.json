@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "home",
+    "about": "about c3c",
+    "services": "services",
+    "portfolio": "portfolio",
+    "journey": "journey",
+    "contact": "contact",
+    "backHome": "back to home",
+    "backPortfolio": "back to portfolio",
+    "backJourney": "back to journey",
+    "otherUniverse": "another universe",
+    "portfolioFull": "more projects"
+  },
+
+  "common": {
+    "next": "next"
+  },
+
+  "next": {
+    "start": "press start",
+    "services": "services",
+    "portfolio": "portfolio",
+    "journey": "journey",
+    "contact": "contact",
+    "home": "back to top"
+  },
+
+  "home": {
+    "title": {
+      "dev": "front-end developer",
+      "integration": "web integrator",
+      "design": "UX/UI designer"
+    },
+    "cta": {
+      "projects": "view projects",
+      "contact": "contact me"
+    }
+  },
+
+  "about": {
+    "kicker": "hybrid profile",
+    "title": {
+      "segment-1": "from",
+      "segment-2": "design",
+      "segment-3": "to",
+      "segment-4": "development"
+    },
+    "subtitle-1": {
+      "segment-1": "I craft",
+      "segment-2": "web experiences",
+      "segment-3": "and apps that are"
+    },
+    "subtitle-2": {
+      "segment-1": "clear",
+      "segment-2": "coherent",
+      "segment-3": "and",
+      "segment-4": "production ready"
+    },
+    "skill": {
+      "flex": {
+        "title": "versatility",
+        "text": ["cross-disciplinary perspective", "complementary experience", "tailored solutions"]
+      },
+      "xp": {
+        "title": "experience",
+        "text": ["6 years in corporate environments", "freelance since 2011"]
+      },
+      "discipline": {
+        "title": "discipline",
+        "text": ["specs & processes", "pixel perfect", "web standards"]
+      },
+      "passion": {
+        "title": "passion",
+        "text": ["self-taught", "active technology watch", "curiosity for industry evolution"]
+      }
+    },
+    "intro": "front-end, integration, UX/UI, design systems,"
+  },
+
+  "services": {
+    "kicker": "cross-functional expertise",
+    "title": {
+      "segment-1": "from",
+      "segment-2": "structure",
+      "segment-3": "to",
+      "segment-4": "implementation"
+    },
+    "intro": {
+      "segment-1": "I support yourprojects across the entire production chain",
+      "segment-2": "turning needs into concrete solutions",
+      "segment-3": "from analysis and prototyping through implementation, product structuring",
+      "segment-4": "and the alignment of flows, components, and screens"
+    },
+    "frontend": {
+      "title": "Front-end development",
+      "text": "Modern, maintainable and coherent interfaces with strong attention to code quality and user experience"
+    },
+    "integration": {
+      "title": "Web integration",
+      "text": "Faithful, responsive and production-oriented integration based on real design deliverables"
+    },
+    "uxui": {
+      "title": "UX/UI design",
+      "text": "Wireframes, mockups, prototypes, visual hierarchy and interface coherence focused on real usage"
+    },
+    "systems": {
+      "title": "Design systems",
+      "text": "Component structure, UI rules and documentation to make projects more reliable and easier to evolve"
+    }
+  },
+
+  "projects": {
+    "kicker": "last projects",
+    "title": "a selection of recent work",
+    "intro": "combining integration, front-end, UX/UI, dashboards, applications and product structuring"
+  },
+
+  "journey": {
+    "kicker": "Journey",
+    "title": "A path built between design, integration and front-end",
+    "intro": "A trajectory that shaped a hybrid profile able to move from framing to production"
+  },
+
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let’s talk about your project",
+    "intro": "Freelance mission, front-end reinforcement, UX/UI framing, prototype or design system: I can support a wide range of needs"
+  },
+
+  "anotherUniverse": {
+    "kicker": "Outside the main flow",
+    "title": "Another Universe",
+    "intro": "A standalone page within the same visual universe, but outside the main portfolio scroll.",
+    "back": "back to portfolio"
+  }
+}
