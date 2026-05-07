@@ -14,8 +14,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
     summary: 'audit, cadrage UX, workshops, maquettes et prototypes HTML pour des dashboards Power BI',
     problem: 'des interfaces pour des dashboards Power BI orientés pilotage plus lisibles, plus cohérentes et adaptées à des usages terrain et management, clarifier et harmoniser des dashboards métiers pour améliorer la lecture des données et accélérer la prise de décision',
     approach: [
-      'audit de l’existant et recueil des attentes',
-      'définition de principes UI et hiérarchie visuelle',
+      'audit de l’existant, recueil des attentes et animation de workshops',
+      'cadrage UX, définition de principes UI et hiérarchie visuelle',
       'conception de maquettes et prototypes HTML',
       'structuration d’un design system exploitable',
     ],
