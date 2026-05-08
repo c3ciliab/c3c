@@ -113,7 +113,10 @@
   "projects": {
     "kicker": "last projects",
     "title": "a selection of recent work",
-    "intro": "combining integration, front-end, UX/UI, dashboards, applications and product structuring"
+    "intro": "combining integration, front-end, UX/UI, dashboards, applications and product structuring",
+    "portfolio": {
+      "kicker": "full portfolio"
+    }
   },
 
   "journey": {

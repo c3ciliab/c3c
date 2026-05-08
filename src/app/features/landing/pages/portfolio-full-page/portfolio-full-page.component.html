@@ -2,16 +2,27 @@
   <app-shell mode="standalone">
     <section class="screen-section standalone-page">
       <div class="inner">
+
+        <header class="section-header">
+          <img src="assets/img/icons/arrow-straight.png" alt="arrow" />
+          <h4>{{ t('projects.portfolio.kicker') }}</h4>
+
+          <button class="h5" [routerLink]="['/', currentLang()]" fragment="portfolio">
+            <span class="nav-label">{{ label('nav.portfolio') }}</span>
+            <span>→</span>
+          </button>
+        </header>
+
+        <aside class="prop">
+          <h3>{{ t('projects.title') }}</h3>
+          <!-- <p class="h3">{{ t('projects.intro') }}</p> -->
+        </aside>
+
         <div class="wrapper">
           <div class="scene">
-            <p class="section-kicker">{{ t('anotherUniverse.kicker') }}</p>
-            <h1>{{ t('anotherUniverse.title') }}</h1>
-            <p>{{ t('anotherUniverse.intro') }}</p>
-            <div class="standalone-page__actions">
-              <a class="btn btn-main" [routerLink]="['/', currentLang()]">
-                {{ t('anotherUniverse.back') }}
-              </a>
-            </div>
+            @for (project of projects(); track project.id) {
+              <app-project-card [project]="project" [lang]="lang()" />
+            }
           </div>
         </div>
       </div>

@@ -20,4 +20,7 @@ export interface ProjectItem {
   tags: string[];
   featured: boolean;
   cover: string;
+  carousel?: string[];
+  subtext?: string;
+  link?: string;
 }

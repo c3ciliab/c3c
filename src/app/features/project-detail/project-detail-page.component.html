@@ -24,9 +24,13 @@
             <span>{{ p.subtitle }}</span>
           </h5>
           <div class="carousel">
-            <img [src]="p.cover" [alt]="p.title" />
+            <img [src]="p.carousel" [alt]="p.title" />
+            <p class="subtext">
+              <span>{{ p.subtext }}</span>
+              <a [href]="p.link" target="_blank">voir le prototype</a>
+            </p>
           </div>
-          <div>
+          <div class="content-block">
             <h6>Stack</h6>
             <ul class="project-tags">
               @for (item of p.stack; track item) {
@@ -37,12 +41,12 @@
         </aside>
 
         <div class="scene">
-          <article>
+          <article class="content-block">
             <h6>Contexte</h6>
             <p>{{ p.problem }}</p>
           </article>
 
-          <article>
+          <article class="content-block">
             <h6>Approche</h6>
             <!-- <p>{{ p.summary }}</p> -->
             <ul>
@@ -52,7 +56,7 @@
             </ul>
           </article>
 
-          <article>
+          <article class="content-block">
             <h6>Livrables</h6>
             <ul>
               @for (item of p.deliverables; track item) {

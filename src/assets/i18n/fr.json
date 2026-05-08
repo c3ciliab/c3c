@@ -113,7 +113,10 @@
   "projects": {
     "kicker": "derniers projets",
     "title": "missions et réalisations récentes",
-    "intro": "où se croisent intégration, front-end, UX/UI, dashboards, applications et structuration produit"
+    "intro": "où se croisent intégration, front-end, UX/UI, dashboards, applications et structuration produit",
+    "portfolio": {
+      "kicker": "portfolio complet"
+    }
   },
 
   "journey": {
