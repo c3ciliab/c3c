@@ -38,6 +38,8 @@
   position: absolute;
   transform: translateY(60%);
   z-index: 2;
+  padding: var(--sp-1);
+  border-block: 1px solid var(--body-text);
 
   h3 {
     span {
