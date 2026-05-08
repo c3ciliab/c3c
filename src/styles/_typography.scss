@@ -17,9 +17,7 @@
 /* FONTS */
 
 // IMPORTS
-// Adobe - Myriad Pro --> corporate font for baseline, auto switch to arial if not available
-@import url("https://use.typekit.net/arm4sae.css");
-// Google Fonts
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
@@ -30,22 +28,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Belanosima:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Codystar:wght@300;400&family=Comfortaa:wght@300..700&family=Dosis:wght@200..800&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Englebert&family=Fresca&family=Gayathri:wght@100;400;700&family=Gruppo&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Londrina+Solid:wght@100;300;400;900&family=McLaren&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Original+Surfer&family=Play:wght@400;700&family=Poiret+One&family=Preahvihear&family=Ranchers&family=Ranga:wght@400;700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Righteous&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Voltaire&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bad+Script&family=Bangers&family=Bilbo+Swash+Caps&family=Caveat:wght@400..700&family=Charm:wght@400;700&family=Comforter+Brush&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Cookie&family=Dancing+Script:wght@400..700&family=Devonshire&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Englebert&family=Euphoria+Script&family=Glass+Antiqua&family=Jim+Nightshade&family=Londrina+Outline&family=Londrina+Solid:wght@100;300;400;900&family=Loved+by+the+King&family=Ma+Shan+Zheng&family=Macondo+Swash+Caps&family=Marck+Script&family=Meow+Script&family=Moon+Dance&family=Oregano:ital@0;1&family=Pacifico&family=Permanent+Marker&family=Princess+Sofia&family=Rancho&family=Reenie+Beanie&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&family=Send+Flowers&family=Shalimar&family=Sriracha&family=Stalemate&family=Unkempt:wght@400;700&family=Updock&family=Zen+Loop:ital@0;1&display=swap');
 
-// VARIABLES
-$myriad: "myriad-pro", sans-serif;
-$oxygen: "Oxygen", sans-serif;
-$bubbler: "Bubbler One", sans-serif;
-$luckiest: "Luckiest Guy", cursive;
-$amatic: "Amatic SC", cursive;
-$pangolin: "Pangolin", cursive;
-$mono: "Oxygen Mono", monospace;
-$shadows: "Shadows Into Light", cursive;
-$shadowstwo: "Shadows Into Light Two", cursive;
-$play: "Play", sans-serif;
-$englebert: "Englebert", cursive;
-
-/* TEXT */
-
-// Sizes
+/* SIZES */
 $xs-txt: 12px;
 $sm-txt: 14px;
 $md-txt: 20px;
@@ -56,11 +39,11 @@ $xxl-txt: 60px;
 $xxlg-txt: 72px;
 $xxxl-txt: 80px;
 
+/* TEXT */
 // Titles
-
 .brand {
   line-height: 1;
-  font-family: $luckiest;
+  font-family: var(--font-luckiest);
   font-size: 192px;
   letter-spacing: 0.01em;
   text-shadow: var(--shadow-lg);
@@ -68,7 +51,7 @@ $xxxl-txt: 80px;
 
 // h1 => tagline
 .tagline {
-  font-family: $amatic;
+  font-family: var(--font-amatic);
   font-size: $xxl-txt;
   text-shadow: var(--shadow-lg);
 
@@ -84,7 +67,7 @@ $xxxl-txt: 80px;
 }
 
 h2 {
-  font-family: $bubbler;
+  font-family: var(--font-bubbler);
   font-size: $xl-txt;
   font-weight: 700;
   text-transform: uppercase;
@@ -92,13 +75,13 @@ h2 {
 
 h3,
 .h3 {
-  font-family: $luckiest;
+  font-family: var(--font-luckiest);
   font-size: $xl-txt;
   text-transform: uppercase;
 }
 
 h4 {
-  font-family: $shadows;
+  font-family: var(--font-shadows);
   font-size: $xxlg-txt;
   font-weight: bold;
   text-transform: capitalize;
@@ -107,7 +90,7 @@ h4 {
 
 h5,
 .h5 {
-  font-family: $bubbler;
+  font-family: var(--font-bubbler);
   font-size: $md-txt;
   font-weight: 700;
   text-transform: uppercase;
@@ -119,7 +102,7 @@ label, .label, .tag, .subtitle {
 }
 
 .tag {
-  font-family: $play;
+  font-family: var(--font-play);
 }
 
 .subtitle, .soft-txt {
@@ -135,22 +118,4 @@ label, .label, .tag, .subtitle {
 .muted {
   font-size: $sm-txt;
   opacity: .7;
-}
-
-// temp styles
-.section-kicker {
-  color: var(--accent-color);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-@mixin brand-txt($style: italic) {
-    font-family: $myriad;
-    font-style: $style;
-    font-weight: bold;
-}
-
-@mixin time-txt {
-    font-family: $mono;
 }
