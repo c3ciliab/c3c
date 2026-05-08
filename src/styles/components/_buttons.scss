@@ -17,7 +17,6 @@
   @extend %btn;
   border-color: rgba(255, 56, 199, 0.6);
   background: rgba(19, 5, 42, 0.6);
-  backdrop-filter: var(--back-f-blur);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -43,11 +42,6 @@
   @extend %btn-primary;
   font-family: var(--font-play);
   font-size: 20px;
-
-  &:hover,
-  &:focus-visible {
-    transform: translateY(2px);
-  }
 }
 
 .btn-start {
