@@ -21,6 +21,15 @@
     transition: var(--tr);
   }
 
+  .legend {
+    position: absolute;
+    font-size: 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.4;
+    transition: var(--tr);
+  }
+
   &.triangle, &.cross {
     left: 50%;
     transform: translateX(-50%);
@@ -35,14 +44,30 @@
     align-items: initial;
     top: 20px;
     padding-top: 2.4px;
+
+    .legend {
+      top: 48px;
+      font-family: var(--font-luckiest);
+    }
   }
 
   &.circle {
     right: 20px;
+
+    .legend {
+      top: 48px;
+      font-family: var(--font-amatic);
+      font-size: 20px;
+      font-weight: bold;
+    }
   }
 
   &.cross {
     bottom: 20px;
+
+    .legend {
+      display: none;
+    }
   }
 
   &.square {
@@ -52,14 +77,22 @@
       width: 28px;
       height: 28px;
     }
+
+    .legend {
+      top: -28px;
+      left: -4px;
+      font-family: var(--font-shadows);
+      font-weight: bold;
+    }
   }
 
   &:hover {
     //transform: translateY(-2px);
     box-shadow: 0 0 18px rgba(255, 56, 199, 0.35);
 
-    svg {
-      opacity: 0.8;
+    svg,
+    .legend {
+      opacity: 1;
     }
   }
 }

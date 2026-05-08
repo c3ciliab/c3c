@@ -59,7 +59,8 @@
   .section-header {
     display: flex;
     position: relative;
-    left: var(--sp-7);
+    z-index: 2;
+    //left: var(--sp-7);
     padding-top: var(--sp-7);
 
     img {
@@ -98,7 +99,7 @@
 
   /* page content */
   .inner {
-    @extend %flexcol;
+    @extend %block;
     flex: 1;
     gap: var(--sp-4);
     max-height: 100%;

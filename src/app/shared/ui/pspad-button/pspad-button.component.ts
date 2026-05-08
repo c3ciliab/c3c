@@ -9,5 +9,6 @@ import { NgClass } from '@angular/common';
 })
 export class PspadButtonComponent {
   @Input() shape = 'shape';
+  @Input() legend = 'legend';
   @Input() iconPath = '';
 }
