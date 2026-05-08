@@ -1,0 +1,17 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding-inline: 12px;
+  white-space: nowrap;
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--radius-full);
+
+  &:hover {
+    color: var(--body-text);
+    background: rgba(241, 21, 143, 1);
+  }
+}

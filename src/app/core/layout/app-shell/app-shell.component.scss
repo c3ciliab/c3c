@@ -60,8 +60,8 @@
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: url('../../../../assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ remove '/' for build
-  //background: url('/assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ add '/' for dev
+  background: url('../../../../assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ add '/' for build
+  //background: url('/assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ remove '/' for dev
 }
 
 @media (max-width: 900px) {

@@ -91,7 +91,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--sp-1);
+  gap: var(--sp-2);
   //border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -99,6 +99,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--sp-2);
 
   .card-meta {
     z-index: 2;
@@ -116,7 +117,8 @@
     align-items: center;
     width: fit-content;
     padding: var(--sp-2);
-    //font-family: var(--font-englebert);
+    font-family: var(--font-englebert);
+    font-weight: normal;
     white-space: nowrap;
     color: var(--accent-color);
     background-color: var(--body-text);
@@ -127,17 +129,7 @@
   }
 }
 
-.card-tags {
-  display: flex;
-  gap: .5rem;
-  padding: var(--sp-2);
+.tag-list {
+  padding: var(--sp-1);
   background-color: var(--body-text);
-
-  li {
-    padding: 0.35rem 0.65rem;
-    white-space: nowrap;
-    border-radius: 999px;
-    background: var(--accent-color);
-    font-size: 0.85rem;
-  }
 }

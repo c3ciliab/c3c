@@ -36,6 +36,8 @@
   @extend %btn;
 }
 
+/* BTNS */
+
 //specific btn styles
 .btn-next {
   @extend %btn-primary;
@@ -121,6 +123,8 @@
   }
 }
 
+/* GROUPS */
+
 .btn-group {
   display: flex;
   gap: 1rem;
@@ -130,16 +134,10 @@
   }
 }
 
-/************* TAGS / CHIPS / ... *************/
+// TAGS/CHIPS
 
 .tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
-
-  .tag {
-    padding: 0.35rem 0.65rem;
-    border-radius: var(--radius-full);
-    background: rgba(255, 255, 255, 0.07);
-  }
 }

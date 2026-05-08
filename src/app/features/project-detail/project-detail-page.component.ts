@@ -1,11 +1,12 @@
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProjectsService } from '../../core/services/projects.service';
+import { ChipTagComponent } from '../../shared/ui/chip-tag/chip-tag.component';
 
 @Component({
   selector: 'app-project-detail-page',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ChipTagComponent],
   templateUrl: './project-detail-page.component.html',
   styleUrl: './project-detail-page.component.scss',
 })

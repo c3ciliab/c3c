@@ -32,9 +32,9 @@
           </div>
           <div class="content-block">
             <h6>Stack</h6>
-            <ul class="project-tags">
-              @for (item of p.stack; track item) {
-                <li>{{ item }}</li>
+            <ul class="tag-list">
+              @for (tag of p.stack; track tag) {
+                <app-chip-tag [tag]="tag"></app-chip-tag>
               }
             </ul>
           </div>

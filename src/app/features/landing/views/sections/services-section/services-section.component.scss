@@ -51,16 +51,6 @@
       //font-family: var(--font-bubbler);
       color: var(--txt-soft);
     }
-
-    .tag-list {
-      .tag {
-        background: rgba(241, 21, 143, .4);
-
-        &:hover {
-          background: rgba(241, 21, 143, .8);
-        }
-      }
-    }
   }
 }
 

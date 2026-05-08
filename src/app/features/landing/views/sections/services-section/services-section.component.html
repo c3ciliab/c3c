@@ -37,7 +37,9 @@
                 <p>{{ t(service.textKey) }}</p>
                 <ul class="tag-list">
                   @for (tag of service.tags; track tag) {
-                    <li class="tag">{{ tag }}</li>
+                    <li>
+                      <app-chip-tag [tag]="tag"></app-chip-tag>
+                    </li>
                   }
                 </ul>
               </div>

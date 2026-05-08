@@ -19,9 +19,11 @@
       </a>
     </header>
 
-    <ul class="card-tags">
+    <ul class="tag-list">
       @for (tag of project.tags; track tag) {
-        <li>{{ tag }}</li>
+        <li>
+          <app-chip-tag [tag]="tag"></app-chip-tag>
+        </li>
       }
     </ul>
   </div>

@@ -37,6 +37,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/c3c/",
+              "deployUrl": "/c3c/",
               "budgets": [
                 {
                   "type": "initial",
