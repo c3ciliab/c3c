@@ -1,0 +1,10 @@
+<div class="card-screen">
+  <a class="card-link" [routerLink]="['/', lang, 'project', project.slug]">
+    <div class="card-panel" [class.left]="variant === 'left'" [class.right]="variant === 'right'" [class.center]="variant === 'center'">
+      <h2>{{ project.type }}</h2>
+    </div>
+    <img [src]="project.cover" [alt]="project.title" />
+    <p class="card-summary">{{ project.summary }}</p>
+    <p class="card-meta">{{ project.client }}</p>
+  </a>
+</div>

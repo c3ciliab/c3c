@@ -3,12 +3,12 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { I18nService } from '../../../../core/services/i18n.service';
 import { ProjectsService } from '../../../../core/services/projects.service';
 import { AppShellComponent } from '../../../../core/layout/app-shell/app-shell.component';
-import { ProjectCardComponent } from '../../../../shared/ui/project-card/project-card.component';
+import { CardScreenComponent } from '../../../../shared/ui/card-screen/card-screen.component';
 
 @Component({
   selector: 'app-portfolio-full-page',
   standalone: true,
-  imports: [AppShellComponent, ProjectCardComponent, RouterLink],
+  imports: [AppShellComponent, CardScreenComponent, RouterLink],
   templateUrl: './portfolio-full-page.component.html',
   styleUrl: './portfolio-full-page.component.scss',
 })

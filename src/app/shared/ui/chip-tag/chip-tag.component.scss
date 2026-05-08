@@ -15,3 +15,18 @@
     background: rgba(241, 21, 143, 1);
   }
 }
+
+:host {
+  &.card-tag {
+    .tag {
+      color: var(--body-text);
+      background: rgba(241, 21, 143, 1);
+      border-color: var(--body-text);
+
+      &:hover {
+        color: var(--accent-color);
+        background: var(--body-text);
+      }
+    }
+  }
+}

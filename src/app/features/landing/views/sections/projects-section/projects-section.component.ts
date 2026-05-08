@@ -5,7 +5,7 @@ import { I18nService } from '../../../../../core/services/i18n.service';
 import { ProjectsService } from '../../../../../core/services/projects.service';
 import { SectionAnchorDirective } from '../../../../../shared/directives/section-anchor.directive';
 import { NextSectionButtonComponent } from '../../../../../shared/ui/next-section-button/next-section-button.component';
-import { ProjectCardComponent } from '../../../../../shared/ui/project-card/project-card.component';
+import { ProjectCardComponent, CardVariant } from '../../../../../shared/ui/project-card/project-card.component';
 
 @Component({
   selector: 'app-projects-section',
@@ -35,5 +35,12 @@ export class ProjectsSectionComponent {
 
   label(key: string): string {
     return this.i18n.t(key);
+  }
+
+  cardVariant(index: number): CardVariant {
+    if (index === 0) return 'left';
+    if (index === 1) return 'center';
+    if (index === 2) return 'right';
+    return 'right';
   }
 }

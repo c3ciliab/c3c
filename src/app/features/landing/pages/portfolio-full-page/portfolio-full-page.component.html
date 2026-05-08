@@ -21,7 +21,7 @@
         <div class="wrapper">
           <div class="scene">
             @for (project of projects(); track project.id) {
-              <app-project-card [project]="project" [lang]="lang()" />
+              <app-card-screen class="no-rotate" [project]="project" [lang]="lang()" />
             }
           </div>
         </div>

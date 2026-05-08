@@ -1,16 +1,17 @@
 <article class="project-card">
-  <a class="card-link" [routerLink]="['/', lang, 'project', project.slug]">
-    <div class="card-panel">
-      <h2>{{ project.type }}</h2>
-    </div>
-    <img [src]="project.cover" [alt]="project.title" />
-    <p class="card-summary">{{ project.summary }}</p>
-  </a>
+  <div class="wire">
+    <hr>
+  </div>
+
+  <app-card-screen [project]="project" [lang]="lang" [variant]="variant"></app-card-screen>
+
+  <div class="wires">
+    <hr>
+    <hr>
+  </div>
 
   <div class="card-content">
     <header class="card-header">
-      <!-- <p class="card-meta">{{ project.client }} · {{ project.period }}</p> -->
-      <p class="card-meta">{{ project.client }}</p>
       <a [routerLink]="['/', lang, 'project', project.slug]">
         <h5>
           {{ project.title }}
@@ -22,7 +23,7 @@
     <ul class="tag-list">
       @for (tag of project.tags; track tag) {
         <li>
-          <app-chip-tag [tag]="tag"></app-chip-tag>
+          <app-chip-tag [tag]="tag" class="card-tag"></app-chip-tag>
         </li>
       }
     </ul>

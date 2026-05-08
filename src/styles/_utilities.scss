@@ -1,5 +1,34 @@
 //classes utilitaires (sr-only etc.)
 
+/* PLACEHOLDERS */
+
+//flex column
+%flexcol {
+  display: flex;
+  flex-direction: column;
+}
+//flex block
+%block {
+  @extend %flexcol;
+  align-items: center;
+}
+//block centered
+%blockcentered {
+  @extend %block;
+  justify-content: center;
+}
+//full centered block
+%fullcentered {
+  @extend %blockcentered;
+  width: 100%;
+}
+//grid block
+%row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
+
 /* TOOLS */
 
 // layout
@@ -34,9 +63,4 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.container-wide {
-  width: min(1200px, calc(100% - 2rem));
-  margin-inline: auto;
 }

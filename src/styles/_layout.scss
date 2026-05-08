@@ -1,34 +1,6 @@
+@use 'utilities' as *;
 /*********** LAYOUT ***********/
 //container, grid, wrappers
-
-/* PLACEHOLDERS */
-
-//flex column
-%flexcol {
-  display: flex;
-  flex-direction: column;
-}
-//flex block
-%block {
-  @extend %flexcol;
-  align-items: center;
-}
-//block centered
-%blockcentered {
-  @extend %block;
-  justify-content: center;
-}
-//full centered block
-%fullcentered {
-  @extend %blockcentered;
-  width: 100%;
-}
-//grid block
-%row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--sp-3);
-}
 
 /* BLOCKS */
 
@@ -60,8 +32,7 @@
     display: flex;
     position: relative;
     z-index: 2;
-    //left: var(--sp-7);
-    padding-top: var(--sp-7);
+    padding-top: var(--sp-8);
 
     img {
       position: absolute;
