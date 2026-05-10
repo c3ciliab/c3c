@@ -8,6 +8,7 @@ export interface ProjectItem {
   client?: string;
   sector: string;
   period: string;
+  place: string;
   year?: string;
   role: string;
   tasks: string[];

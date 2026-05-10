@@ -4,66 +4,87 @@
       <img [src]="p.cover" [alt]="p.title" />
     </div>
 
-    <div class="page-content">
-      <header class="page-header">
-        <h2>{{ p.role }}</h2>
-        <a class="back-link" [routerLink]="['/', lang()]" fragment="portfolio">
-          <span>➜</span>
-        </a>
-        <p class="project-meta">
-          <span>{{ p.client }}</span>
-          <span>{{ p.sector }}</span>
-          <span>{{ p.period }}</span>
-        </p>
-      </header>
+    <div class="page-container">
+      <h2>{{ p.role }}</h2>
+      <div class="page-content">
+        <header class="page-header">
+          <a class="back-link" [routerLink]="['/', lang()]" fragment="portfolio">
+            <span>➜</span>
+          </a>
+          <p class="project-meta">
+            <span>{{ p.client }}</span>
+            <span>{{ p.sector }}</span>
+            <span>{{ p.period }}</span>
+          </p>
+        </header>
 
-      <div class="wrapper">
-        <aside>
-          <h5>
-            <span>{{ p.title }}</span>
-            <span>{{ p.subtitle }}</span>
-          </h5>
-          <div class="carousel">
-            <img [src]="p.carousel" [alt]="p.title" />
-            <p class="subtext">
-              <span>{{ p.subtext }}</span>
-              <a [href]="p.link" target="_blank">voir le prototype</a>
-            </p>
+        <p class="meta subtext">{{ p.place }}</p>
+
+        <div class="wrapper">
+
+          <aside>
+            <h5>
+              <span>{{ p.title }}</span>
+              <span>{{ p.subtitle }}</span>
+            </h5>
+            <article class="content-block">
+              <h6>Contexte</h6>
+              <p class="content-txt">{{ p.problem }}</p>
+            </article>
+          </aside>
+
+          <div class="scene">
+
+            <div class="sc-side side-l">
+              <ul class="task-list">
+                @for (task of p.tasks; track task) {
+                  <li>{{ task }}</li>
+                }
+              </ul>
+
+              <div class="carousel">
+                <div class="carousel-screen">
+                  <img [src]="p.carousel" [alt]="p.title" />
+                </div>
+                <div class="carousel-info">
+                  <p class="subtext">
+                    <span>{{ p.subtext }}</span>
+                    <a [href]="p.link" target="_blank">voir le prototype</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="chip-block">
+                <h6 class="temp">Stack</h6>
+                <ul class="tag-list">
+                  @for (tag of p.stack; track tag) {
+                    <app-chip-tag [tag]="tag"></app-chip-tag>
+                  }
+                </ul>
+              </div>
+            </div>
+
+            <div class="sc-side side-r">
+              <article class="content-block">
+                <h6>Approche</h6>
+                <!-- <p>{{ p.summary }}</p> -->
+                <ul class="content-txt">
+                  @for (item of p.approach; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              </article>
+
+              <article class="content-block">
+                <h6>Livrables</h6>
+                <ul class="content-txt">
+                  @for (item of p.deliverables; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              </article>
+            </div>
           </div>
-          <div class="content-block">
-            <h6>Stack</h6>
-            <ul class="tag-list">
-              @for (tag of p.stack; track tag) {
-                <app-chip-tag [tag]="tag"></app-chip-tag>
-              }
-            </ul>
-          </div>
-        </aside>
-
-        <div class="scene">
-          <article class="content-block">
-            <h6>Contexte</h6>
-            <p>{{ p.problem }}</p>
-          </article>
-
-          <article class="content-block">
-            <h6>Approche</h6>
-            <!-- <p>{{ p.summary }}</p> -->
-            <ul>
-              @for (item of p.approach; track item) {
-                <li>{{ item }}</li>
-              }
-            </ul>
-          </article>
-
-          <article class="content-block">
-            <h6>Livrables</h6>
-            <ul>
-              @for (item of p.deliverables; track item) {
-                <li>{{ item }}</li>
-              }
-            </ul>
-          </article>
         </div>
       </div>
     </div>
