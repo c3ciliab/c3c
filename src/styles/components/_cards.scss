@@ -1,16 +1,9 @@
 /*********** CARDS ***********/
 
-/* PLACEHOLDERS */
-
-%flexcol {
-  display: flex;
-  flex-direction: column;
-}
-
 // card
 /*
 .card {
-  @extend %flexcol;
+  @include flex;
   gap: var(--sp-2);
   padding: var(--sp-2);
   background-color: var(--body-color);

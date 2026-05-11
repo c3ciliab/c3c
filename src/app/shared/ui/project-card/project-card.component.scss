@@ -1,7 +1,7 @@
 @use '../../../../styles/index' as *;
 
 .project-card {
-  @extend %flexcol;
+  @include flex;
   //gap: var(--sp-4);
   position: relative;
 }

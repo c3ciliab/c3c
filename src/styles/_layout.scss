@@ -1,18 +1,18 @@
-@use 'utilities' as *;
+@use 'mixins' as *;
 /*********** LAYOUT ***********/
 //container, grid, wrappers
 
 /* BLOCKS */
 
 .container {
-  @extend %fullcentered;
+  @include flexCenter;
   height: 100%;
 }
 
 /* SCREENS LAYOUT */
 
 .screen-section {
-  @extend %fullcentered;
+  @include flexCenter;
   position: relative;
   z-index: 1;
   min-height: 100dvh;
@@ -21,7 +21,7 @@
 
   /* home content */
   .content {
-    @extend %blockcentered;
+    @include flexCenter;
     flex: 1;
     max-width: 100%;
     //height: 100svh;
@@ -42,7 +42,7 @@
 
   /* aside frame */
   .prop {
-    @extend %block;
+    @include flexAlign(column);
     align-self: center;
     gap: var(--sp-2);
     width: fit-content;
@@ -69,7 +69,7 @@
 
   /* page content */
   .inner {
-    @extend %block;
+    @include flexAlign(column);
     flex: 1;
     gap: var(--sp-4);
     max-height: 100%;
@@ -101,8 +101,6 @@
 
 /* BLOCKS
 .page-content {
-  @extend %flexcol;
-  gap: 2rem;
   width: min(1200px, calc(100% - 2rem));
   margin-inline: auto;
 }

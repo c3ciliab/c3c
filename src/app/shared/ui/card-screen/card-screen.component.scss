@@ -5,7 +5,7 @@
 }*/
 
 .card-link {
-  @extend %blockcentered;
+  @include flexCenter;
   position: relative;
   padding: var(--sp-3) var(--sp-0);
 

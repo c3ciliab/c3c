@@ -27,6 +27,7 @@
   @include flex($direction, $gap);
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 // distributions
@@ -80,6 +81,15 @@
   @include mq(1920px) {
     display: flex;
   }
+}
+
+/* PLACEHOLDERS */
+
+//grid block
+%row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
 }
 
 /* TAILWIND LIKE CLASSES */

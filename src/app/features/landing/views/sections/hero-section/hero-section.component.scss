@@ -1,29 +1,15 @@
-
-/* PLACEHOLDERS */
-
-%flexcol {
-  display: flex;
-  flex-direction: column;
-}
-
-%block {
-  @extend %flexcol;
-  align-items: center;
-}
-
-/* BLOCKS */
+@use '../../../../../../styles/index' as *;
 
 .hero {
-  @extend %block;
   flex: 1;
-  justify-content: center;
+  @include flexCenter;
 
   .brand {
     transform: translateY(-24px);
   }
 
   .tagline {
-    @extend %block;
+    @include flexAlign(column);
   }
 
   hr {
@@ -33,12 +19,12 @@
     }
 
     &:nth-of-type(2) {
-      height: 96px;
+      height: var(--sp-9);
       transform: translateY(-20px);
     }
 
     &:nth-of-type(3) {
-      height: 72px;
+      height: var(--sp-7);
       transform: translateY(12px);
     }
 

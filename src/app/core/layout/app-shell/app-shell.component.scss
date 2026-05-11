@@ -1,3 +1,5 @@
+@use '../../../../styles/index' as *;
+
 .app-shell {
   display: flex;
   min-height: 100svh;
@@ -12,8 +14,7 @@
     left: 0;
     width: var(--sidebar);
     height: 100svh;
-    display: flex;
-    flex-direction: column;
+    @include flex;
     justify-content: space-between;
     padding: var(--sp-3);
   }
@@ -28,7 +29,7 @@
   position: fixed;
   z-index: 40;
   top: 50%;
-  left: 36px;
+  left: var(--sp-4);
   transform: translateY(36px) translateX(-36px);
   opacity: 0;
   pointer-events: none;
@@ -60,8 +61,8 @@
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: url('../../../../assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ add '/' for build
-  //background: url('/assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ remove '/' for dev
+  background: url('../../../../assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ add '../' for build
+  //background: url('/assets/img/bg/bg-home.png') center / cover no-repeat; // ➜ remove '../' for dev
 }
 
 @media (max-width: 900px) {
