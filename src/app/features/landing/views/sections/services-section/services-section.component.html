@@ -5,6 +5,10 @@
     <header class="section-header">
       <img src="assets/img/icons/arrow-straight.png" alt="arrow" />
       <h4>{{ t('services.kicker') }}</h4>
+      <button class="h5" [routerLink]="['/', currentLang(), 'all-services']">
+        <span class="nav-label">{{ label('nav.servicesFull') }}</span>
+        <span>→</span>
+      </button>
     </header>
 
     <aside class="prop">
@@ -17,11 +21,6 @@
       <p class="h3">
         <span>{{ t('services.intro.segment-1') }}</span>
       </p>
-      <!-- <p class="h3">
-        <span>{{ t('services.intro.segment-2') }}</span>
-        <span>{{ t('services.intro.segment-3') }}</span>
-        <span>{{ t('services.intro.segment-4') }}</span>
-      </p> -->
     </aside>
 
     <div class="wrapper">

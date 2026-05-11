@@ -1,22 +1,18 @@
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { I18nService } from '../../../../core/services/i18n.service';
-import { ProjectsService } from '../../../../core/services/projects.service';
 import { AppShellComponent } from '../../../../core/layout/app-shell/app-shell.component';
-import { CardScreenComponent } from '../../../../shared/ui/card-screen/card-screen.component';
 
 @Component({
-  selector: 'app-portfolio-full-page',
-  standalone: true,
-  imports: [AppShellComponent, CardScreenComponent, RouterLink],
-  templateUrl: './portfolio-full-page.component.html',
-  styleUrl: './portfolio-full-page.component.scss',
+  selector: 'app-all-services-page',
+  imports: [AppShellComponent, RouterLink],
+  templateUrl: './all-services-page.component.html',
+  styleUrl: './all-services-page.component.scss',
 })
-export class PortfolioFullPageComponent {
+export class AllServicesPageComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly i18n = inject(I18nService);
-  private readonly projectsService = inject(ProjectsService);
 
   readonly ready = computed(() => this.i18n.loaded());
 
@@ -35,11 +31,9 @@ export class PortfolioFullPageComponent {
     await this.i18n.init(lang);
 
     if (lang !== 'fr' && lang !== 'en') {
-      await this.router.navigate(['/fr/full-portfolio']);
+      await this.router.navigate(['/fr/all-services']);
     }
   }
-
-  readonly projects = this.projectsService.projects;
 
   t(key: string): string {
     return this.i18n.t(key);
@@ -49,4 +43,3 @@ export class PortfolioFullPageComponent {
     return this.i18n.t(key);
   }
 }
-

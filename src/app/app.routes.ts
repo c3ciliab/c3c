@@ -15,6 +15,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: ':lang/all-services',
+    loadComponent: () =>
+      import('./features/landing/pages/all-services-page/all-services-page.component').then(
+        (m) => m.AllServicesPageComponent,
+      ),
+  },
+  {
     path: ':lang/full-portfolio',
     loadComponent: () =>
       import('./features/landing/pages/portfolio-full-page/portfolio-full-page.component').then(
@@ -27,6 +34,11 @@ export const routes: Routes = [
       import('./features/landing/pages/another-universe-page/another-universe-page.component').then(
         (m) => m.AnotherUniversePageComponent,
       ),
+  },
+  {
+    path: 'all-services',
+    pathMatch: 'full',
+    redirectTo: 'fr/all-services',
   },
   {
     path: 'full-portfolio',

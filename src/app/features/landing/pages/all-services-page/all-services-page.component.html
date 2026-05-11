@@ -1,0 +1,34 @@
+@if (ready()) {
+  <app-shell mode="standalone">
+    <section class="screen-section standalone-page">
+      <div class="inner">
+
+        <header class="section-header">
+          <img src="assets/img/icons/arrow-straight.png" alt="arrow" />
+          <h4>{{ t('services.services.kicker') }}</h4>
+
+          <button class="h5" [routerLink]="['/', currentLang()]" fragment="services">
+            <span class="nav-label">{{ label('nav.services') }}</span>
+            <span>→</span>
+          </button>
+        </header>
+
+        <aside class="prop">
+          <h3>{{ t('services.kicker') }}</h3>
+          <p class="h3">
+            <span>{{ t('services.intro.segment-1') }}</span>
+            <span>{{ t('services.intro.segment-2') }}</span>
+            <span>{{ t('services.intro.segment-3') }}</span>
+            <span>{{ t('services.intro.segment-4') }}</span>
+          </p>
+        </aside>
+
+        <div class="wrapper">
+          <div class="scene">
+            content
+          </div>
+        </div>
+      </div>
+    </section>
+  </app-shell>
+}

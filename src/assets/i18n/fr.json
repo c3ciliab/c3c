@@ -10,6 +10,7 @@
     "backPortfolio": "retour portfolio",
     "backJourney": "retour parcours",
     "otherUniverse": "another universe",
+    "servicesFull": "+ de services",
     "portfolioFull": "+ de projets",
     "portfolioDetail": "détail projet"
   },
@@ -108,6 +109,9 @@
     "systems": {
       "title": "design systems",
       "text": "structuration de composants, règles UI et documentation pour fiabiliser les projets et faciliter les évolutions"
+    },
+    "services": {
+      "kicker": "prestations"
     }
   },
 

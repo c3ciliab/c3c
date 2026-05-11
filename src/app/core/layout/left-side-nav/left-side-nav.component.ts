@@ -41,10 +41,14 @@ export class LeftSideNavComponent {
   });
 
   readonly standaloneActiveKey = computed<
-    'portfolio' | 'journey' | 'another-universe' | 'full-portfolio' | 'project'
+    'portfolio' | 'journey' | 'another-universe' | 'all-services' | 'full-portfolio' | 'project'
   >(() => {
     if (this.secondaryPage() === 'another-universe') {
       return 'another-universe';
+    }
+
+    if (this.secondaryPage() === 'all-services') {
+      return 'all-services';
     }
 
     if (this.secondaryPage() === 'full-portfolio') {
@@ -84,15 +88,20 @@ export class LeftSideNavComponent {
     }
 
     const portfolioChildren = ['project', 'full-portfolio'];
+    const servicesChildren = ['all-services'];
 
-    return itemId === 'portfolio' && portfolioChildren.includes(this.secondaryPage() ?? '');
+    return (
+      (itemId === 'portfolio' && portfolioChildren.includes(this.secondaryPage() ?? '')) ||
+      (itemId === 'services' && servicesChildren.includes(this.secondaryPage() ?? ''))
+    );
   }
 
   isChildActive(childId: string): boolean {
     return (
       (childId === 'another-universe' && this.secondaryPage() === 'another-universe') ||
       (childId === 'full-portfolio' && this.secondaryPage() === 'full-portfolio') ||
-      (childId === 'project' && this.secondaryPage() === 'project-detail')
+      (childId === 'project' && this.secondaryPage() === 'project-detail') ||
+      (childId === 'all-services' && this.secondaryPage() === 'all-services')
     );
   }
 }

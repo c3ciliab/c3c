@@ -7,6 +7,7 @@ export type RouteMode = 'portfolio' | 'standalone';
 
 export enum SecondaryPage {
   AnotherUniverse = 'another-universe',
+  ServicesFull = 'all-services',
   PortfolioFull = 'full-portfolio',
   ProjectDetail = 'project-detail',
   Cv = 'cv',
@@ -62,6 +63,9 @@ export class RouteContextService {
     if (childPath === 'another-universe') {
       mode = 'standalone';
       secondaryPage = SecondaryPage.AnotherUniverse;
+    } else if (childPath === 'all-services') {
+      mode = 'standalone';
+      secondaryPage = SecondaryPage.ServicesFull;
     } else if (childPath === 'full-portfolio') {
       mode = 'standalone';
       secondaryPage = SecondaryPage.PortfolioFull;

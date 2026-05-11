@@ -21,13 +21,12 @@ export class ProjectsSectionComponent {
   private readonly route = inject(ActivatedRoute);
 
   readonly items = NAV_ITEMS;
+  readonly projects = this.projectsService.featuredProjects;
 
   readonly lang = computed(() => {
     const routeLang = this.route.snapshot.paramMap.get('lang');
     return routeLang === 'en' ? 'en' : 'fr';
   });
-
-  readonly projects = this.projectsService.featuredProjects;
 
   t(key: string): string {
     return this.i18n.t(key);
