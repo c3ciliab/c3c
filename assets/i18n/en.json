@@ -10,7 +10,9 @@
     "backPortfolio": "back to portfolio",
     "backJourney": "back to journey",
     "otherUniverse": "another universe",
-    "portfolioFull": "more projects"
+    "servicesFull": "more services",
+    "portfolioFull": "more projects",
+    "portfolioDetail": "project detail"
   },
 
   "common": {
@@ -107,6 +109,9 @@
     "systems": {
       "title": "Design systems",
       "text": "Component structure, UI rules and documentation to make projects more reliable and easier to evolve"
+    },
+    "services": {
+      "kicker": "services"
     }
   },
 
