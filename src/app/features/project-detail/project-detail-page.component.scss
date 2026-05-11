@@ -13,7 +13,7 @@
   img {
     object-fit: cover;
     //object-position: center 24%;
-    opacity: 0.6;
+    opacity: 0.4;
     mix-blend-mode: luminosity;
   }
 }
@@ -22,17 +22,17 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 24%;
-  right: 12%;
+  top: 204px;
+  right: var(--sidebar);
   bottom: 0;
-  left: 12%;
+  left: var(--sidebar);
   background-color: var(--body-text);
 }
 
 h2 {
   position: absolute;
   top: -56px;
-  right: 4%;
+  right: 48px;
   font-family: var(--font-luckiest);
   font-size: 72px;
   font-weight: normal;
@@ -46,7 +46,7 @@ h2 {
   gap: var(--sp-1);
   position: relative;
   padding-inline: 36px 72px;
-  padding-block: 36px 72px;
+  padding-block: 36px 60px;
 }
 
 .page-header {

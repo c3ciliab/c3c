@@ -1,8 +1,9 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { NAV_ITEMS } from '../../../data/navigation.data';
 import { ActiveSectionService } from '../../services/active-section.service';
 import { I18nService } from '../../services/i18n.service';
+import { ProjectsService } from '../../services/projects.service';
 import { RouteContextService } from '../../services/route-context.service';
 import { SectionScrollService } from '../../services/section-scroll.service';
 
@@ -17,20 +18,41 @@ export class LeftSideNavComponent {
   private readonly i18n = inject(I18nService);
   private readonly activeSection = inject(ActiveSectionService);
   private readonly sectionScroll = inject(SectionScrollService);
+  private readonly projectsService = inject(ProjectsService);
   private readonly router = inject(Router);
+
   readonly routeContext = inject(RouteContextService);
-
   readonly items = NAV_ITEMS;
-  readonly activeId = computed(() => this.activeSection.activeSection());
+  readonly isMenuOpen = signal(true);
 
+  readonly activeId = computed(() => this.activeSection.activeSection());
   readonly navMode = computed(() => this.routeContext.mode());
   readonly currentLang = computed(() => this.routeContext.currentLang());
   readonly currentFragment = computed(() => this.routeContext.currentFragment());
   readonly secondaryPage = computed(() => this.routeContext.secondaryPage());
+  readonly currentProjectSlug = computed(() => this.routeContext.currentProjectSlug());
 
-  readonly standaloneActiveKey = computed<'portfolio' | 'journey' | 'another-universe'>(() => {
+  readonly currentProjectTitle = computed(() => {
+    const slug = this.currentProjectSlug();
+    if (!slug) return null;
+
+    const project = this.projectsService.getProjectBySlug(slug);
+    return project?.id ?? slug;
+  });
+
+  readonly standaloneActiveKey = computed<
+    'portfolio' | 'journey' | 'another-universe' | 'full-portfolio' | 'project'
+  >(() => {
     if (this.secondaryPage() === 'another-universe') {
       return 'another-universe';
+    }
+
+    if (this.secondaryPage() === 'full-portfolio') {
+      return 'full-portfolio';
+    }
+
+    if (this.secondaryPage() === 'project-detail') {
+      return 'project';
     }
 
     if (this.currentFragment() === 'journey') {
@@ -42,6 +64,10 @@ export class LeftSideNavComponent {
 
   label(key: string): string {
     return this.i18n.t(key);
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen.update((value) => !value);
   }
 
   goTo(sectionId: string): void {
@@ -57,13 +83,16 @@ export class LeftSideNavComponent {
       return this.activeId() === itemId;
     }
 
-    return (
-      itemId === 'portfolio' &&
-      this.secondaryPage() === 'full-portfolio'
-    );
+    const portfolioChildren = ['project', 'full-portfolio'];
+
+    return itemId === 'portfolio' && portfolioChildren.includes(this.secondaryPage() ?? '');
   }
 
   isChildActive(childId: string): boolean {
-    return this.secondaryPage() === childId;
+    return (
+      (childId === 'another-universe' && this.secondaryPage() === 'another-universe') ||
+      (childId === 'full-portfolio' && this.secondaryPage() === 'full-portfolio') ||
+      (childId === 'project' && this.secondaryPage() === 'project-detail')
+    );
   }
 }

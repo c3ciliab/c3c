@@ -13,15 +13,38 @@
 ul {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-1);
-  // &.nav-list { }
-  // &.nav-standalone { }
+  gap: 8px;
+
+  &.nav-list {
+    .nav-link {
+      &.is-active {
+        cursor: default;
+      }
+    }
+  }
+
+  &.nav-standalone {
+    .nav-children {
+      gap: var(--sp-1);
+
+      .nav-link {
+        &.is-active {
+          cursor: default;
+        }
+      }
+    }
+  }
 }
 
 .nav-group {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-1);
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  line-height: 1;
 }
 
 .nav-link {

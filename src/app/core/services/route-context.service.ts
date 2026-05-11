@@ -21,11 +21,13 @@ export class RouteContextService {
   private readonly modeSignal = signal<RouteMode>('portfolio');
   private readonly fragmentSignal = signal<string | null>(null);
   private readonly secondaryPageSignal = signal<SecondaryPage | null>(null);
+  private readonly projectSlugSignal = signal<string | null>(null);
 
   readonly currentLang = computed(() => this.langSignal());
   readonly mode = computed(() => this.modeSignal());
   readonly secondaryPage = computed(() => this.secondaryPageSignal());
   readonly currentFragment = computed(() => this.fragmentSignal());
+  readonly currentProjectSlug = computed(() => this.projectSlugSignal());
 
   readonly isPortfolio = computed(() => this.modeSignal() === 'portfolio');
   readonly isStandalone = computed(() => this.modeSignal() === 'standalone');
@@ -51,9 +53,11 @@ export class RouteContextService {
     const lang: AppLang = maybeLang === 'en' ? 'en' : 'fr';
 
     const childPath = segments[1] ?? null;
+    const slug = segments[2] ?? null;
 
     let mode: RouteMode = 'portfolio';
     let secondaryPage: SecondaryPage | null = null;
+    let projectSlug: string | null = null;
 
     if (childPath === 'another-universe') {
       mode = 'standalone';
@@ -64,6 +68,7 @@ export class RouteContextService {
     } else if (childPath === 'project') {
       mode = 'standalone';
       secondaryPage = SecondaryPage.ProjectDetail;
+      projectSlug = slug;
     } else if (childPath === 'cv') {
       mode = 'standalone';
       secondaryPage = SecondaryPage.Cv;
@@ -73,5 +78,6 @@ export class RouteContextService {
     this.modeSignal.set(mode);
     this.secondaryPageSignal.set(secondaryPage);
     this.fragmentSignal.set(fragmentPart ?? null);
+    this.projectSlugSignal.set(projectSlug);
   }
 }

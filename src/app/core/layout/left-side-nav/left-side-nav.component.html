@@ -4,14 +4,27 @@
     <ul class="nav-list">
       @for (item of items; track item.id) {
         <li class="nav-item">
+          <button type="button" class="nav-link" [class.is-active]="isParentActive(item.id)" (click)="goTo(item.id)">
+            <span class="nav-dot"></span>
+            <span class="nav-label">{{ label(item.labelKey) }}</span>
+          </button>
+        </li>
+      }
+    </ul>
+  }
+
+  @if (navMode() === 'standalone') {
+    <ul class="nav-standalone">
+      @for (item of items; track item.id) {
+        <li class="nav-item">
           @if (!item.children?.length) {
-            <button type="button" class="nav-link" [class.is-active]="isParentActive(item.id)" (click)="goTo(item.id)">
+            <button type="button" class="nav-link" [class.is-active]="isParentActive(item.id)" [routerLink]="['/', currentLang()]" [fragment]=item.id>
               <span class="nav-dot"></span>
               <span class="nav-label">{{ label(item.labelKey) }}</span>
             </button>
           } @else {
             <div class="nav-group" [class.is-active]="isParentActive(item.id)">
-              <button type="button" class="nav-link" [class.is-active]="isParentActive(item.id)" (click)="goTo(item.id)">
+              <button type="button" class="nav-link" [class.is-active]="isParentActive(item.id)" [routerLink]="['/', currentLang()]" [fragment]=item.id>
                 <span class="nav-dot"></span>
                 <span class="nav-label">{{ label(item.labelKey) }}</span>
               </button>
@@ -25,6 +38,15 @@
                     </a>
                   </li>
                 }
+
+                @if (item.id === 'portfolio' && secondaryPage() === 'project-detail' && currentProjectTitle()) {
+                  <li>
+                    <span class="nav-link nav-link--child is-active">
+                      <span class="nav-dot nav-dot--child"></span>
+                      <span class="nav-label">{{ currentProjectTitle() }}</span>
+                    </span>
+                  </li>
+                }
               </ul>
             </div>
           }
@@ -32,7 +54,7 @@
       }
     </ul>
   }
-
+  <!--
   @if (navMode() === 'standalone') {
     <ul class="nav-standalone">
       <li class="nav-item">
@@ -61,4 +83,5 @@
       </li>
     </ul>
   }
+  -->
 </nav>
